@@ -2,4 +2,4 @@
 
 ## .bsf and .bdf
 
-We had changed the file name from My7seg_incomplete.bdf to My7seg.bdf, which casues the My7seg symbol unable to open. As the result, we tried to use the text editer to open bsf file, and disvoer the link between bsf to bdf stored as text feild in bsf file. It seems the bdf file is just a warper for bdf, which only indicate how to display the entity.
+We find out that the link between .bsf and .bdf are bidirectional, we could include only the .bsf or the .bdf, and the code will still synthesis. But we were suggested by the UTA to include .bdf as that's how normally done.
