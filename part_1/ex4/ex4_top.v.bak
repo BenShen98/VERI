@@ -1,0 +1,13 @@
+module ex4_top(
+	SW[9:0],
+	HEX0[6:0]
+	HEX1[6:0]
+	HEX2[6:0]
+	HEX3[6:0]
+	);
+	
+	input SW [9:0]
+	output HEX0[6:0]
+	output HEX1[6:0]
+	output HEX2[6:0]
+	output HEX3[6:0]

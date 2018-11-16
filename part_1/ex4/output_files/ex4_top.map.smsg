@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at ex4_top.v(16): object "a1" differs only in case from object "A1" in the same scope File: H:/VERI/part_1/ex4/ex4_top.v Line: 16
+Info (10281): Verilog HDL Declaration information at ex4_top.v(16): object "a2" differs only in case from object "A2" in the same scope File: H:/VERI/part_1/ex4/ex4_top.v Line: 16
+Info (10281): Verilog HDL Declaration information at ex4_top.v(16): object "a3" differs only in case from object "A3" in the same scope File: H:/VERI/part_1/ex4/ex4_top.v Line: 16
+Info (10281): Verilog HDL Declaration information at ex4_top.v(16): object "a4" differs only in case from object "A4" in the same scope File: H:/VERI/part_1/ex4/ex4_top.v Line: 16
+Info (10281): Verilog HDL Declaration information at ex4_top.v(16): object "a5" differs only in case from object "A5" in the same scope File: H:/VERI/part_1/ex4/ex4_top.v Line: 16

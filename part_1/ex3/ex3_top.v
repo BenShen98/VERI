@@ -1,9 +1,9 @@
 module ex3_top(
 	SW,	//input 10 bit switch, RHS is the LSB
-	HEX0, //LS
+	HEX0, //LSB
 	HEX1, 
-	HEX2
-		//MS
+	HEX2 	//MSB
+
 );
 	
 	input [9:0] SW;

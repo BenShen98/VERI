@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex3_top
-Fri Nov 16 12:05:22 2018
+Fri Nov 16 15:34:07 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 16 12:05:22 2018           ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 16 15:34:07 2018           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex3_top                                         ;
 ; Top-level Entity Name           ; ex3_top                                         ;
@@ -168,14 +168,14 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; ../lib/hex_2_7seg.v              ; yes             ; User Verilog HDL File  ; H:/VERI/part1/lib/hex_2_7seg.v ;         ;
-; ex3_top.v                        ; yes             ; User Verilog HDL File  ; H:/VERI/part1/ex3/ex3_top.v    ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+; ../lib/hex_2_7seg.v              ; yes             ; User Verilog HDL File  ; H:/VERI/part_1/lib/hex_2_7seg.v ;         ;
+; ex3_top.v                        ; yes             ; User Verilog HDL File  ; H:/VERI/part_1/ex3/ex3_top.v    ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -275,18 +275,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Fri Nov 16 12:05:10 2018
+    Info: Processing started: Fri Nov 16 15:33:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex3 -c ex3_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /veri/part1/lib/hex_2_7seg.v
-    Info (12023): Found entity 1: hex_2_7seg File: H:/VERI/part1/lib/hex_2_7seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/part_1/lib/hex_2_7seg.v
+    Info (12023): Found entity 1: hex_2_7seg File: H:/VERI/part_1/lib/hex_2_7seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ex3_top.v
-    Info (12023): Found entity 1: ex3_top File: H:/VERI/part1/ex3/ex3_top.v Line: 1
+    Info (12023): Found entity 1: ex3_top File: H:/VERI/part_1/ex3/ex3_top.v Line: 1
 Info (12127): Elaborating entity "ex3_top" for the top level hierarchy
-Info (12128): Elaborating entity "hex_2_7seg" for hierarchy "hex_2_7seg:SEG0" File: H:/VERI/part1/ex3/ex3_top.v Line: 15
+Info (12128): Elaborating entity "hex_2_7seg" for hierarchy "hex_2_7seg:SEG0" File: H:/VERI/part_1/ex3/ex3_top.v Line: 15
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: H:/VERI/part1/ex3/ex3_top.v Line: 12
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: H:/VERI/part_1/ex3/ex3_top.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -296,8 +296,8 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21061): Implemented 17 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 884 megabytes
-    Info: Processing ended: Fri Nov 16 12:05:23 2018
-    Info: Elapsed time: 00:00:13
+    Info: Processing ended: Fri Nov 16 15:34:08 2018
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:23
 
 

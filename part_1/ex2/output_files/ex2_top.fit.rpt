@@ -1,5 +1,5 @@
 Fitter report for ex2_top
-Fri Nov 16 11:29:23 2018
+Fri Nov 16 15:29:55 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Nov 16 11:29:23 2018           ;
+; Fitter Status                   ; Successful - Fri Nov 16 15:29:55 2018           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex2_top                                         ;
 ; Top-level Entity Name           ; ex2_top                                         ;
@@ -360,7 +360,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in H:/VERI/part1/ex2/output_files/ex2_top.pin.
+The pin-out file can be found in H:/VERI/part_1/ex2/output_files/ex2_top.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -1876,24 +1876,24 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file H:/VERI/part1/ex2/output_files/ex2_top.fit.smsg
+Info (144001): Generated suppressed messages file H:/VERI/part_1/ex2/output_files/ex2_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 2578 megabytes
-    Info: Processing ended: Fri Nov 16 11:29:25 2018
-    Info: Elapsed time: 00:00:31
+    Info: Peak virtual memory: 2571 megabytes
+    Info: Processing ended: Fri Nov 16 15:29:56 2018
+    Info: Elapsed time: 00:00:30
     Info: Total CPU time (on all processors): 00:00:49
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in H:/VERI/part1/ex2/output_files/ex2_top.fit.smsg.
+The suppressed messages can be found in H:/VERI/part_1/ex2/output_files/ex2_top.fit.smsg.
 
 
