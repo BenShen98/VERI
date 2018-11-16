@@ -1,0 +1,76 @@
+|ex3_top
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+HEX0[0] << hex_2_7seg:SEG0.port0
+HEX0[1] << hex_2_7seg:SEG0.port0
+HEX0[2] << hex_2_7seg:SEG0.port0
+HEX0[3] << hex_2_7seg:SEG0.port0
+HEX0[4] << hex_2_7seg:SEG0.port0
+HEX0[5] << hex_2_7seg:SEG0.port0
+HEX0[6] << hex_2_7seg:SEG0.port0
+HEX1[0] << hex_2_7seg:SEG1.port0
+HEX1[1] << hex_2_7seg:SEG1.port0
+HEX1[2] << hex_2_7seg:SEG1.port0
+HEX1[3] << hex_2_7seg:SEG1.port0
+HEX1[4] << hex_2_7seg:SEG1.port0
+HEX1[5] << hex_2_7seg:SEG1.port0
+HEX1[6] << hex_2_7seg:SEG1.port0
+HEX2[0] << hex_2_7seg:SEG2.port0
+HEX2[1] << hex_2_7seg:SEG2.port0
+HEX2[2] << hex_2_7seg:SEG2.port0
+HEX2[3] << hex_2_7seg:SEG2.port0
+HEX2[4] << hex_2_7seg:SEG2.port0
+HEX2[5] << hex_2_7seg:SEG2.port0
+HEX2[6] << hex_2_7seg:SEG2.port0
+
+
+|ex3_top|hex_2_7seg:SEG0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex3_top|hex_2_7seg:SEG1
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex3_top|hex_2_7seg:SEG2
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+

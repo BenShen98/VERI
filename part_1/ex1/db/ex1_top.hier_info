@@ -1,0 +1,73 @@
+|ex1_top
+HEX[0] <= My7seg:inst.out[0]
+HEX[1] <= My7seg:inst.out[1]
+HEX[2] <= My7seg:inst.out[2]
+HEX[3] <= My7seg:inst.out[3]
+HEX[4] <= My7seg:inst.out[4]
+HEX[5] <= My7seg:inst.out[5]
+HEX[6] <= My7seg:inst.out[6]
+SW[0] => My7seg:inst.in[0]
+SW[1] => My7seg:inst.in[1]
+SW[2] => My7seg:inst.in[2]
+SW[3] => My7seg:inst.in[3]
+
+
+|ex1_top|My7seg:inst
+out[0] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => inst3.IN0
+in[0] => inst21.IN2
+in[0] => inst20.IN2
+in[0] => inst35.IN3
+in[0] => inst36.IN3
+in[0] => inst34.IN3
+in[0] => inst30.IN3
+in[0] => inst29.IN2
+in[0] => inst12.IN2
+in[0] => inst13.IN3
+in[0] => inst11.IN2
+in[0] => inst1.IN3
+in[0] => inst16.IN2
+in[0] => inst9.IN1
+in[1] => inst4.IN0
+in[1] => inst21.IN1
+in[1] => inst22.IN2
+in[1] => inst25.IN2
+in[1] => inst26.IN2
+in[1] => inst36.IN2
+in[1] => inst31.IN1
+in[1] => inst29.IN1
+in[1] => inst10.IN2
+in[1] => inst12.IN1
+in[1] => inst1.IN2
+in[2] => inst19.IN1
+in[2] => inst21.IN0
+in[2] => inst5.IN0
+in[2] => inst25.IN1
+in[2] => inst24.IN1
+in[2] => inst33.IN1
+in[2] => inst35.IN1
+in[2] => inst28.IN1
+in[2] => inst30.IN1
+in[2] => inst31.IN0
+in[2] => inst13.IN1
+in[2] => inst1.IN1
+in[2] => inst2.IN1
+in[2] => inst15.IN1
+in[3] => inst6.IN0
+in[3] => inst22.IN0
+in[3] => inst25.IN0
+in[3] => inst24.IN0
+in[3] => inst35.IN0
+in[3] => inst36.IN0
+in[3] => inst28.IN0
+in[3] => inst29.IN0
+in[3] => inst13.IN0
+in[3] => inst2.IN0
+
+

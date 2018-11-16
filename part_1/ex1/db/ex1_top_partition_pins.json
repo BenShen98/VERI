@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HEX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
