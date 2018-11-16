@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ex4_top
-Fri Nov 16 17:06:22 2018
-Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Fri Nov 16 23:18:53 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -10,47 +10,66 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "ge5_add3:A12"
+ 10. Port Connectivity Checks: "ge5_add3:A10"
+ 11. Port Connectivity Checks: "ge5_add3:A9"
+ 12. Port Connectivity Checks: "ge5_add3:A7"
+ 13. Port Connectivity Checks: "ge5_add3:A5"
+ 14. Port Connectivity Checks: "ge5_add3:A4"
+ 15. Port Connectivity Checks: "ge5_add3:A3"
+ 16. Port Connectivity Checks: "ge5_add3:A2"
+ 17. Port Connectivity Checks: "ge5_add3:A1"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Nov 16 17:06:22 2018               ;
-; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
-; Revision Name               ; ex4_top                                         ;
-; Top-level Entity Name       ; ex4_top                                         ;
-; Family                      ; Cyclone V                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Nov 16 23:18:53 2018       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; ex4_top                                     ;
+; Top-level Entity Name           ; ex4_top                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 38                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -62,13 +81,13 @@ agreement for further details.
 ; Top-level entity name                                                           ; ex4_top            ; ex4_top            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
@@ -119,7 +138,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -135,7 +154,6 @@ agreement for further details.
 ; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Synthesis Seed                                                                  ; 1                  ; 1                  ;
 ; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
 ; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -157,34 +175,243 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+; ../lib/ge5_add3.v                ; yes             ; User Verilog HDL File  ; E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/lib/ge5_add3.v ;         ;
+; ex4_top.v                        ; yes             ; User Verilog HDL File  ; E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v  ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 38    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; SW[1] ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 39    ;
+; Average fan-out                             ; 0.51  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |ex4_top                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 38   ; 0            ; |ex4_top            ; ex4_top     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A12"                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A10"                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A9"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A7"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A5"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A4"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A3"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A2"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ge5_add3:A1"                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 38                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Fri Nov 16 17:06:12 2018
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Nov 16 23:18:43 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex4 -c ex4_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10170): Verilog HDL syntax error at ge5_add3.v(3) near text: "output";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: H:/VERI/part_1/lib/ge5_add3.v Line: 3
-Error (10170): Verilog HDL syntax error at ge5_add3.v(5) near text: "always";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: H:/VERI/part_1/lib/ge5_add3.v Line: 5
-Error (10170): Verilog HDL syntax error at ge5_add3.v(6) near text: "in";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: H:/VERI/part_1/lib/ge5_add3.v Line: 6
-Error (10112): Ignored design unit "ge5_add3" at ge5_add3.v(1) due to previous errors File: H:/VERI/part_1/lib/ge5_add3.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file /veri/part_1/lib/ge5_add3.v
+Info (12021): Found 1 design units, including 1 entities, in source file /onedrive - imperial college london/uni/year2/eelab/veri/part_1/lib/ge5_add3.v
+    Info (12023): Found entity 1: ge5_add3 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/lib/ge5_add3.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ex4_top.v
-    Info (12023): Found entity 1: ex4_top File: H:/VERI/part_1/ex4/ex4_top.v Line: 1
-Info (144001): Generated suppressed messages file H:/VERI/part_1/ex4/output_files/ex4_top.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 829 megabytes
-    Error: Processing ended: Fri Nov 16 17:06:22 2018
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:22
+    Info (12023): Found entity 1: ex4_top File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 1
+Info (12127): Elaborating entity "ex4_top" for the top level hierarchy
+Info (12128): Elaborating entity "ge5_add3" for hierarchy "ge5_add3:A1" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 18
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 10
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 10
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 10
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 10
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 10
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 10
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 11
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 12
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 13
+Info (144001): Generated suppressed messages file E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/output_files/ex4_top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[2]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[3]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[7]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[8]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[9]" File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/ex4_top.v Line: 9
+Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 28 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Fri Nov 16 23:18:53 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in H:/VERI/part_1/ex4/output_files/ex4_top.map.smsg.
+The suppressed messages can be found in E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_1/ex4/output_files/ex4_top.map.smsg.
 
 
