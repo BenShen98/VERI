@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Nov 16 23:19:18 2018
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fitter Status : Successful - Mon Nov 19 14:58:17 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : ex4_top
 Top-level Entity Name : ex4_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 37 / 32,070 ( < 1 % )
 Total registers : 0
 Total pins : 38 / 457 ( 8 % )
 Total virtual pins : 0

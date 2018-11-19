@@ -1,4 +1,4 @@
-module ge5_add3(out,in);
+module ge5_add3(in,out);
 	input [3:0] in;
 	output reg [3:0] out;
 	

@@ -12,8 +12,10 @@ module ex4_top(
 	output [6:0] HEX2;
 	output [6:0] HEX3;
 
-	wire [3:0]	w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12;
-	wire [3:0]	a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12;
+	wire [3:0]	w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12; //input
+	wire [3:0]	a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12; //output from ge5_add3
+	
+	wire [3:0] bcd0,bcd1,bcd2,bcd3;
 	
 	ge5_add3 A1 (w1,a1);
 	ge5_add3 A2 (w2,a2);
@@ -56,10 +58,19 @@ module ex4_top(
 	assign w12 = {a9[2:0],SW[1]};
 	
 	//level 8
-	assign HEX3={3'b000,a10[3]};
-	assign HEX2={a10[2:0],a11[3]};
-	assign HEX1={a11[2:0],a12[3]};
-	assign HEX0={a12[2:0],SW[0]};
+	assign bcd3={3'b000,a10[3]};
+	assign bcd2={a10[2:0],a11[3]};
+	assign bcd1={a11[2:0],a12[3]};
+	assign bcd0={a12[2:0],SW[0]};
+	
+	//hex to 7 seg
+	hex_2_7seg SEG0 (HEX0,bcd0);
+	hex_2_7seg SEG1 (HEX1,bcd1);
+	hex_2_7seg SEG2 (HEX2,bcd2);
+	hex_2_7seg SEG3 (HEX3,bcd3);
+
+	
+	
 
 endmodule
 
