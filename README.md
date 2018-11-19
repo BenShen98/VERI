@@ -1,5 +1,9 @@
 # VERI
 
+This project was one of the the year-2 experiment, written by [Peter Cheung](http://www.ee.ic.ac.uk/pcheung/index.html).\
+Written Verilog configuration for Cyclone	V FPGA (5CSEMA5F31C6).\
+[Link to the experiment](http://www.ee.ic.ac.uk/pcheung/teaching/E2_Experiment/).
+
 ## Useful note
 
 
