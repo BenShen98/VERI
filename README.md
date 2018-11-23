@@ -23,3 +23,8 @@ Written Verilog configuration for Cyclone	V FPGA (5CSEMA5F31C6).\
  
 ### [case default](https://stackoverflow.com/questions/29451175/how-can-i-assign-a-dont-care-value-to-an-output-in-a-combinational-module-in)
  * avoid use x as default
+ 
+### parameter vs [assign vs alias](https://invionics.com/systemverilog-insights-series-alias-vs-assign-whats-the-difference/)
+ * parameter: has to be constant
+ * assign: assigning the right-hand side of the statement to the left-hand side but not the inverse
+ * alias: bidirectional
