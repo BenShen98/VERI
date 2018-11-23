@@ -27,4 +27,8 @@ Written Verilog configuration for Cyclone	V FPGA (5CSEMA5F31C6).\
 ### parameter vs [assign vs alias](https://invionics.com/systemverilog-insights-series-alias-vs-assign-whats-the-difference/)
  * parameter: has to be constant
  * assign: assigning the right-hand side of the statement to the left-hand side but not the inverse
- * alias: bidirectional
+ * alias: bidirectional (SystemVerilog, not Verilog)
+ 
+### ! vs ~
+ * ! is logical inversion
+ * ~ is bitwise inversion
