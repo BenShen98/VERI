@@ -1,0 +1,218 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ex5_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_2/ex5 {H:/VERI/part_2/ex5/counter_8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+# 
+vsim -do ex5_top_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter_8
+# vsim -do ex5_top_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter_8 
+# Loading work.counter_8
+# do ex5_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_2/ex5 {H:/VERI/part_2/ex5/counter_8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+# 
+add wave clock enable
+add wave -hexadecinal count
+# Unrecognized option: "-hexadecinal" ignored.
+add wave -hexadecimal count
+add wave -hexadecimal count
+force enable 1
+force clock 0 0, 1 10ns -repeat 20ns
+run 100ns
+force enable low
+# Invalid binary digit: l.
+# ** Error: (vsim-4011) Invalid force value: low.
+# 
+force enable 0
+run 100ns
+restart
+# Loading work.counter_8
+do ./tb_counter.do
+clear
+# invalid command name "clear"
+clean
+# invalid command name "clean"
+do ./tb_counter.do
+man
+# invalid command name "man"
+hlep
+# invalid command name "hlep"
+help
+# Type help <command> to get information on that command, or try one of the following:
+#   commands  List all available commands and topics.
+#   Debugging Lists debugging commands.
+#   Execution Information on controlling execution of the simulation.
+#   Tcl       Information on Tcl commands.
+#   Tk        Information on Tk commands.
+#   incrTcl   Information on incrTcl commands.
+# 
+help <clean>
+# No help for <clean> available.
+help clean
+# No help for clean available.
+help force
+# The force command allows you to apply stimulus interactively to VHDL signals and Verilog nets.
+# Usage: force [-freeze | -drive | -deposit] [-cancel <time>] [-repeat <time>] <object_name> {<value> [[@]<time>[<unit>]]}...
+step
+stop
+clear
+# invalid command name "clear"
+restart
+step
+step
+step
+step
+step
+step
+step
+step
+step
+do ./tb_counter.do
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+restart
+force clock 0 0, 1 10ns -repeat 20ns
+force enable 0 0, 1 100ns -repeat 200ns
+run 200ns
+step
+restart
+force clock 0 0, 1 10ns -repeat 20ns
+force enable 0 0, 1 100ns -repeat 200ns
+step
+step
+# Next activity is in 10 ns.
+step
+step
+step
+# Next activity is in 10 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step -over
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+step -current
+step -current
+step -over -current
+step -out -current
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 10 ns.
+step
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 10 ns.
+step -over
+# Next activity is in 10 ns.
+force count 0
+step -over
+# Next activity is in 10 ns.
+force count 555
+# Invalid binary digit: 5.
+# ** Error: (vsim-4011) Invalid force value: 555.
+# 
+step
