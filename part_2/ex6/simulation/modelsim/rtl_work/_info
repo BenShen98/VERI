@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VERI\part_2\ex6\simulation\modelsim
+vdivclk
+!i10b 1
+!s100 ETT2?IXH<5DlRS>zgLCTU1
+IQC3Xi`YYgGZ`0bX6o[MA@1
+VKm;ZcM:jd2X:4[9i5ace21
+Z1 dH:\VERI\part_2\ex6\simulation\modelsim
+w1543573955
+8H:/VERI/part_2/ex6/divclk.v
+FH:/VERI/part_2/ex6/divclk.v
+L0 3
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1543573980.562000
+!s107 H:/VERI/part_2/ex6/divclk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_2/ex6|H:/VERI/part_2/ex6/divclk.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+H:/VERI/part_2/ex6 -O0

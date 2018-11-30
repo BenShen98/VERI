@@ -16,13 +16,17 @@ module ex6_top(
 	wire [15:0] wb;
 	wire [3:0] a1,a2,a3,a4,a5;
 	
-	wire reset,enable;
+	wire reset,enable,tick;
 	 
 	assign reset = ~KEY[1];
-	assign enable = ~KEY[0];
+	assign enable = ~KEY[0] & tick;
 	
 	
+	divclk div50k (CLOCK_50,tick,16'h61a8);
+	
+
 	counter_16 COUNTER (CLOCK_50,enable,reset,wb);
+
 	
 	bin2bcd_16 bcd0 (wb,a1,a2,a3,a4,a5);	
 	
