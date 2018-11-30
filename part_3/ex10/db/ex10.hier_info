@@ -1,0 +1,104 @@
+|ex10_top
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+CLOCK_50 => CLOCK_50.IN2
+DAC_CS <= spi2dac:SPI1.port4
+DAC_SDI <= spi2dac:SPI1.port3
+DAC_LD <= spi2dac:SPI1.port6
+DAC_SCK <= spi2dac:SPI1.port5
+
+
+|ex10_top|divclk:DIV1
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => clk_out~reg0.CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+k[0] => count.DATAB
+k[1] => count.DATAB
+k[2] => count.DATAB
+k[3] => count.DATAB
+k[4] => count.DATAB
+k[5] => count.DATAB
+k[6] => count.DATAB
+k[7] => count.DATAB
+k[8] => count.DATAB
+k[9] => count.DATAB
+k[10] => count.DATAB
+k[11] => count.DATAB
+k[12] => count.DATAB
+k[13] => count.DATAB
+k[14] => count.DATAB
+k[15] => count.DATAB
+
+
+|ex10_top|spi2dac:SPI1
+sysclk => shift_reg[0].CLK
+sysclk => shift_reg[1].CLK
+sysclk => shift_reg[2].CLK
+sysclk => shift_reg[3].CLK
+sysclk => shift_reg[4].CLK
+sysclk => shift_reg[5].CLK
+sysclk => shift_reg[6].CLK
+sysclk => shift_reg[7].CLK
+sysclk => shift_reg[8].CLK
+sysclk => shift_reg[9].CLK
+sysclk => shift_reg[10].CLK
+sysclk => shift_reg[11].CLK
+sysclk => shift_reg[12].CLK
+sysclk => shift_reg[13].CLK
+sysclk => shift_reg[14].CLK
+sysclk => shift_reg[15].CLK
+sysclk => state[0].CLK
+sysclk => state[1].CLK
+sysclk => state[2].CLK
+sysclk => state[3].CLK
+sysclk => state[4].CLK
+sysclk => clk_1MHz.CLK
+sysclk => tick.CLK
+sysclk => ctr[0].CLK
+sysclk => ctr[1].CLK
+sysclk => ctr[2].CLK
+sysclk => ctr[3].CLK
+sysclk => ctr[4].CLK
+sysclk => sr_state~4.DATAIN
+data_in[0] => shift_reg.DATAB
+data_in[1] => shift_reg.DATAB
+data_in[2] => shift_reg.DATAB
+data_in[3] => shift_reg.DATAB
+data_in[4] => shift_reg.DATAB
+data_in[5] => shift_reg.DATAB
+data_in[6] => shift_reg.DATAB
+data_in[7] => shift_reg.DATAB
+data_in[8] => shift_reg.DATAB
+data_in[9] => shift_reg.DATAB
+load => sr_state.OUTPUTSELECT
+load => sr_state.OUTPUTSELECT
+load => sr_state.OUTPUTSELECT
+dac_sdi <= shift_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+dac_cs <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+dac_sck <= dac_sck.DB_MAX_OUTPUT_PORT_TYPE
+dac_ld <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+
+

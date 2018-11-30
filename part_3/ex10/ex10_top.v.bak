@@ -1,0 +1,19 @@
+module ex10_top(
+	SW,
+	clk,
+	DAC_CS,
+	DAC_SDI,
+	DAC_LD,
+	DAC_SCK
+	)
+	
+	input [9:0]SW;
+	input clk;
+	output DAC_CS,DAC_SDI,DAC_LD,DAC_SCK;
+	
+	wire clk_out;
+	
+	clk_16 
+	
+	spi2dac SPI1 (clk,SW,
+	

@@ -1,0 +1,39 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ex10_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/lib {H:/VERI/part_3/lib/spi2dac.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi2dac
+# 
+# Top level modules:
+# 	spi2dac
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/lib {H:/VERI/part_3/lib/divclk.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module divclk
+# 
+# Top level modules:
+# 	divclk
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/ex10 {H:/VERI/part_3/ex10/ex10_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex10_top
+# 
+# Top level modules:
+# 	ex10_top
+# 
+vsim work.ex10_top
+# vsim work.ex10_top 
+# Loading work.ex10_top
+# Loading work.divclk
+# Loading work.spi2dac
+do test.do
+do test.do
+do test.do
