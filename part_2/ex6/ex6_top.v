@@ -1,6 +1,7 @@
 module ex6_top(
-	CLOCK_50,
-	KEY,
+	CLOCK_50, //50 Mhz clk
+	KEY, //key0 => press to enable counter; key1 => press to reset counter
+	SW, //sw0 => turn on to enable counter
 	HEX0,
 	HEX1,
 	HEX2,
@@ -10,6 +11,7 @@ module ex6_top(
 
 	input CLOCK_50;
 	input [1:0] KEY;
+	input [0:0] SW;
 	
 	output [6:0]HEX0,HEX1,HEX2,HEX3,HEX4;
 
@@ -19,10 +21,10 @@ module ex6_top(
 	wire reset,enable,tick;
 	 
 	assign reset = ~KEY[1];
-	assign enable = ~KEY[0] & tick;
+	assign enable = (~KEY[0] | SW[0])  & tick;
 	
 	
-	divclk div50k (CLOCK_50,tick,16'h61a8);
+	divclk div50k (CLOCK_50,tick,16'd50000);
 	
 
 	counter_16 COUNTER (CLOCK_50,enable,reset,wb);
