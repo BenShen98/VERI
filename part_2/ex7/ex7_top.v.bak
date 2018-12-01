@@ -1,0 +1,8 @@
+module ex7_top(
+	SW,//auto increment counter
+	KEY,//for click to next count
+	HEX0,
+	HEX1,
+	CLOCK_50//system 50Mhz clock
+);
+

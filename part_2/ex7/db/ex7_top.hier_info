@@ -1,0 +1,153 @@
+|ex7_top
+SW[0] => triger.IN1
+KEY[0] => _.IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => triger.IN1
+HEX0[0] <= hex_2_7seg:SEG0.port0
+HEX0[1] <= hex_2_7seg:SEG0.port0
+HEX0[2] <= hex_2_7seg:SEG0.port0
+HEX0[3] <= hex_2_7seg:SEG0.port0
+HEX0[4] <= hex_2_7seg:SEG0.port0
+HEX0[5] <= hex_2_7seg:SEG0.port0
+HEX0[6] <= hex_2_7seg:SEG0.port0
+HEX1[0] <= hex_2_7seg:SEG1.port0
+HEX1[1] <= hex_2_7seg:SEG1.port0
+HEX1[2] <= hex_2_7seg:SEG1.port0
+HEX1[3] <= hex_2_7seg:SEG1.port0
+HEX1[4] <= hex_2_7seg:SEG1.port0
+HEX1[5] <= hex_2_7seg:SEG1.port0
+HEX1[6] <= hex_2_7seg:SEG1.port0
+CLOCK_50 => CLOCK_50.IN2
+
+
+|ex7_top|divclk:DIV50k
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => clk_out~reg0.CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+k[0] => count.DATAB
+k[1] => count.DATAB
+k[2] => count.DATAB
+k[3] => count.DATAB
+k[4] => count.DATAB
+k[5] => count.DATAB
+k[6] => count.DATAB
+k[7] => count.DATAB
+k[8] => count.DATAB
+k[9] => count.DATAB
+k[10] => count.DATAB
+k[11] => count.DATAB
+k[12] => count.DATAB
+k[13] => count.DATAB
+k[14] => count.DATAB
+k[15] => count.DATAB
+
+
+|ex7_top|divclk:DIV1k
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => clk_out~reg0.CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+k[0] => count.DATAB
+k[1] => count.DATAB
+k[2] => count.DATAB
+k[3] => count.DATAB
+k[4] => count.DATAB
+k[5] => count.DATAB
+k[6] => count.DATAB
+k[7] => count.DATAB
+k[8] => count.DATAB
+k[9] => count.DATAB
+k[10] => count.DATAB
+k[11] => count.DATAB
+k[12] => count.DATAB
+k[13] => count.DATAB
+k[14] => count.DATAB
+k[15] => count.DATAB
+
+
+|ex7_top|LFSR_7:comb_6
+clk => wasEnable.CLK
+clk => x[1].CLK
+clk => x[2].CLK
+clk => x[3].CLK
+clk => x[4].CLK
+clk => x[5].CLK
+clk => x[6].CLK
+clk => x[7].CLK
+reset => x.OUTPUTSELECT
+reset => x.OUTPUTSELECT
+reset => x.OUTPUTSELECT
+reset => x.OUTPUTSELECT
+reset => x.OUTPUTSELECT
+reset => x.OUTPUTSELECT
+reset => x.OUTPUTSELECT
+reset => wasEnable.ENA
+out[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= x[5].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= x[6].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= x[7].DB_MAX_OUTPUT_PORT_TYPE
+enable => always0.IN1
+enable => wasEnable.OUTPUTSELECT
+
+
+|ex7_top|hex_2_7seg:SEG0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex7_top|hex_2_7seg:SEG1
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+

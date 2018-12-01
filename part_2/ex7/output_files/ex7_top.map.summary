@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sat Dec 01 19:29:01 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : ex7_top
+Top-level Entity Name : ex7_top
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 42
+Total pins : 20
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

@@ -1,0 +1,5 @@
+add wave clk,reset
+add wave -hexadecimal out
+
+force clk 0 0,0 10ns -repeat 20ns
+run 4360ns #128 cycles

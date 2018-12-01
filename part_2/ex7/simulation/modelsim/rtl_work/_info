@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7/simulation/modelsim
+vLFSR_7
+!s110 1543689964
+!i10b 1
+!s100 UC8E]RUQ>1_6nBO<MTbnU2
+IRReYAD8C^ekmfd:7Z>z@^1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1543689457
+8E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7/LFSR_7.v
+FE:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7/LFSR_7.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1543689964.000000
+!s107 E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7/LFSR_7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7|E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7/LFSR_7.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex7}
+tCvgOpt 0
+n@l@f@s@r_7
