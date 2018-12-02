@@ -1,0 +1,137 @@
+# Reading E:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ex8_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying E:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/OneDrive\ -\ Imperial\ College\ London/uni/year2/EELab/VERI/part_2/lib {E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:10 on Dec 02,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib" E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v 
+# -- Compiling module hex_2_7seg
+# 
+# Top level modules:
+# 	hex_2_7seg
+# End time: 12:01:10 on Dec 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/OneDrive\ -\ Imperial\ College\ London/uni/year2/EELab/VERI/part_2/lib {E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/bin2bcd_16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:10 on Dec 02,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib" E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/bin2bcd_16.v 
+# -- Compiling module bin2bcd_16
+# 
+# Top level modules:
+# 	bin2bcd_16
+# End time: 12:01:10 on Dec 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/OneDrive\ -\ Imperial\ College\ London/uni/year2/EELab/VERI/part_2/lib {E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/add3_ge5.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:10 on Dec 02,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib" E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/add3_ge5.v 
+# -- Compiling module add3_ge5
+# 
+# Top level modules:
+# 	add3_ge5
+# End time: 12:01:10 on Dec 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/OneDrive\ -\ Imperial\ College\ London/uni/year2/EELab/VERI/part_2/ex8 {E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/clkdiv_16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:11 on Dec 02,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8" E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/clkdiv_16.v 
+# -- Compiling module clkdiv_16
+# 
+# Top level modules:
+# 	clkdiv_16
+# End time: 12:01:11 on Dec 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/OneDrive\ -\ Imperial\ College\ London/uni/year2/EELab/VERI/part_2/ex8 {E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:11 on Dec 02,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8" E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v 
+# -- Compiling module ex8_top
+# 
+# Top level modules:
+# 	ex8_top
+# End time: 12:01:11 on Dec 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.ex8_top
+# vsim work.ex8_top 
+# Start time: 12:01:26 on Dec 02,2018
+# Loading work.ex8_top
+# Loading work.clkdiv_16
+# Loading work.bin2bcd_16
+# Loading work.add3_ge5
+# Loading work.hex_2_7seg
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(106): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG0 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(107): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG1 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(108): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG2 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(109): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG3 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(110): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG4 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+add wave CLOCK_50 tick_ms tick_hs state
+force CLOCK_50 0 0, 1 10ns -repeart 20ns
+# Unknown option: repeart
+# ** Error: (vish-4003) Invalid option '-repeart'.
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]
+force CLOCK_50 0 0, 1 10ns -repeat20ns
+# Unknown option: repeat20ns
+# ** Error: (vish-4003) Invalid option '-repeat20ns'.
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]
+force CLOCK_50 0 0, 1 10ns -repeat 20ns
+force key 0
+# ** Error (suppressible): (vsim-4008) Object 'key' not found.
+# 
+force KEY 0
+step 1s
+# expected integer but got "1s"
+# ** Error: (vsim-3176) Invalid step count '1s'.
+# Usage: step [<n>] | -over [<n>] | -out | -inst <region> | -this <address> | -current
+run 1s
+# Invalid time value: 1s
+run 1
+run 1000ms
+
+clear
+# invalid command name "clear"
+restart
+add wave ledbuff
+# (vish-4014) No objects found matching 'ledbuff'.
+add wave ledbuff
+restart
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(106): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG0 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(107): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG1 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(108): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG2 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(109): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG3 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+# ** Warning: (vsim-3015) E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/ex8/ex8_top.v(110): [PCDPC] - Port size (7) does not match connection size (4) for port 'out'. The port definition is at: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ex8_top/SEG4 File: E:/OneDrive - Imperial College London/uni/year2/EELab/VERI/part_2/lib/hex_2_7seg.v
+run 100ns
+# WARNING: No extended dataflow license exists
+force CLOCK_50 0 0, 1 10ns -repeat 20ns
+run 10ns
+run 1ms
+force KEY 0
+run 1ms
+run 1ms
+run 500ms
+run 500ms
+run 100ms
+add wave LEDR
+run 100ms
+run 500ms
+# End time: 12:27:02 on Dec 02,2018, Elapsed time: 0:25:36
+# Errors: 7, Warnings: 11

@@ -1,0 +1,6 @@
+
+State Machine - |ex8_top|state
+Name state.00 state.WAITDELAY state.LIGHTUP 
+state.00 0 0 0 
+state.LIGHTUP 1 0 1 
+state.WAITDELAY 1 1 0 

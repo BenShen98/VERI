@@ -1,0 +1,8 @@
+module clkdiv_16(in,out,num);
+
+	input in;
+	input [15:0] num;
+
+	output out;
+
+endmodule 
