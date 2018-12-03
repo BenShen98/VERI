@@ -33,3 +33,27 @@ Written Verilog configuration for Cyclone	V FPGA (5CSEMA5F31C6).\
 ### ! vs ~
  * ! is logical inversion
  * ~ is bitwise inversion
+
+
+## Part 2 Counters and Finite State Machines
+### RTL Simulation
+By using Modelsim of RTL Simulation, waveforms of various differnt siganls can be shown. 
+The following code is the instruction:
+ add wave XXXXXXXX
+ force xxx 
+ force CLOCK_50 0 1,1 10ns -repeat xxxns
+ (*force* can enable all signals to user defined values)
+ *run* executes the given signals
+
+By creating a DO file, we can simplify things extensivly by running the testbench file.
+Also, single stepping allows the user to debug easily.
+
+### Notice
+Always include a xxx.sdc file which specifies the working clock to a certain speed.
+Always remember to modifiy the pin assignment file. 
+Always check if the board is chosen correctly.
+
+### Linear Feedback Shift Register
+The following graph indicates the truth table which implements the logic of 1+X+X^7.
+
+ 
