@@ -1,0 +1,9 @@
+
+State Machine - |ex9_top|state
+Name state.IDEL state.REACTION state.CHEATING_PREVENTION state.WAITDELAY state.LIGHTUP state.000 
+state.000 0 0 0 0 0 0 
+state.LIGHTUP 0 0 0 0 1 1 
+state.WAITDELAY 0 0 0 1 0 1 
+state.CHEATING_PREVENTION 0 0 1 0 0 1 
+state.REACTION 0 1 0 0 0 1 
+state.IDEL 1 0 0 0 0 1 

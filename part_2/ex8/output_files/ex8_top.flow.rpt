@@ -1,5 +1,5 @@
 Flow report for ex8_top
-Sun Dec 02 13:20:39 2018
+Sun Dec 02 13:36:55 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Dec 02 13:20:39 2018       ;
+; Flow Status                     ; Successful - Sun Dec 02 13:36:55 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; ex8_top                                     ;
 ; Top-level Entity Name           ; ex8_top                                     ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2018 13:19:47 ;
+; Start date & time ; 12/02/2018 13:36:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ex8_top             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123719791820167.154375678605184        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 123719791820167.154375776303380        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4844 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:28     ; 1.0                     ; 6567 MB             ; 00:00:51                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4849 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5153 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4757 MB             ; 00:00:01                           ;
-; Total                ; 00:00:49     ; --                      ; --                  ; 00:01:22                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4850 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:28     ; 1.0                     ; 6567 MB             ; 00:00:52                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4849 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5150 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4757 MB             ; 00:00:01                           ;
+; Total                ; 00:00:48     ; --                      ; --                  ; 00:01:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
