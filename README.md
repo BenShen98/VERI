@@ -37,7 +37,7 @@ Written Verilog configuration for Cyclone	V FPGA (5CSEMA5F31C6).\
 
 ## Part 2 Counters and Finite State Machines
 ### RTL Simulation
-By using Modelsim of RTL Simulation, waveforms of various differnt siganls can be shown. 
+By using Modelsim of RTL Simulation, waveforms of various differnt siganls can be shown.\
 The following code is the instruction:
  * add wave XXXXXXXX
  * force xxx 
@@ -56,4 +56,19 @@ Also, single stepping allows the user to debug easily.
 ### Linear Feedback Shift Register
 The following graph indicates the truth table which implements the logic of 1+X+X^7.
 
+![Truth table](https://github.com/BenShen98/VERI/blob/master/part_2/img/ex7_LFSR_excel.png)
+
+This was check by using MODELSIM in Quartus Prime. The following image shows the wave diagram.
+
+![Wave form](https://github.com/BenShen98/VERI/blob/master/part_2/img/ex7_LFSR.png)
+
+The Netlist graph was then generated to verify the correctness of design.\
+![Netlist](https://github.com/BenShen98/VERI/blob/master/part_2/img/ex7_RTL.png)
+
+### Delay circuit
+The clock should be working at 1ms/cycle which is equivalent to 1MHz. This can be achieved by dividing
+the 50MHz clock by (50000x500).For more information,please refer to the circuit diagram below:\
+
+![circuit diagram](https://github.com/BenShen98/VERI/blob/master/part_2/img/Screenshot%202018-12-03%20at%2021.42.43.png)
  
+
