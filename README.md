@@ -83,4 +83,8 @@ the 50MHz clock by (50000x500).For more information,please refer to the circuit 
 
 ![circuit diagram](https://github.com/BenShen98/VERI/blob/master/part_2/img/Screenshot%202018-12-03%20at%2021.42.43.png)
  
+ ### Reaction Meter
+The aim of this section is to generate a timer using the previous part. 
+By modifiying the previous state machine, the new FSM looks like below\
+![FSM](https://github.com/BenShen98/VERI/blob/master/part_2/img/ex9_state.png)
 
