@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\Dropbox\_My Documents\E2 Digital\adc_dac\simulation\modelsim
+vspi2adc
+!i10b 1
+!s100 <>meYdBmJ`WBeDQ4[DA]]2
+IVB=R1?17XcaCoSADk3Gf?3
+V9a1c[dMnkCVEffcZibC4n0
+Z1 dZ:\Dropbox\_My Documents\E2 Digital\adc_dac\simulation\modelsim
+w1390659441
+8Z:/Dropbox/_My Documents/E2 Digital/adc_dac/spi2adc.v
+FZ:/Dropbox/_My Documents/E2 Digital/adc_dac/spi2adc.v
+L0 9
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1390659465.905000
+!s107 Z:/Dropbox/_My Documents/E2 Digital/adc_dac/spi2adc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/Dropbox/_My Documents/E2 Digital/adc_dac|Z:/Dropbox/_My Documents/E2 Digital/adc_dac/spi2adc.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+Z:/Dropbox/_My Documents/E2 Digital/adc_dac} -O0

@@ -1,0 +1,12 @@
+
+State Machine - |ex16_top|spi2adc:SPI_ADC|sr_state
+Name sr_state.IDLE sr_state.WAIT_CSB_HIGH sr_state.WAIT_CSB_FALL 
+sr_state.IDLE 0 0 0 
+sr_state.WAIT_CSB_FALL 1 0 1 
+sr_state.WAIT_CSB_HIGH 1 1 0 
+
+State Machine - |ex16_top|spi2dac:SPI_DAC|sr_state
+Name sr_state.IDLE sr_state.WAIT_CSB_HIGH sr_state.WAIT_CSB_FALL 
+sr_state.IDLE 0 0 0 
+sr_state.WAIT_CSB_FALL 1 0 1 
+sr_state.WAIT_CSB_HIGH 1 1 0 
