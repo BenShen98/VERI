@@ -10,11 +10,11 @@ SW[7] => SW[7].IN2
 SW[8] => SW[8].IN2
 SW[9] => SW[9].IN2
 CLOCK_50 => CLOCK_50.IN3
-DAC_CS << spi2dac:SPI1.port4
-DAC_SDI << spi2dac:SPI1.port3
-DAC_LD << spi2dac:SPI1.port6
-DAC_SCK << spi2dac:SPI1.port5
-pwm_out << pwm:PWM1.port3
+DAC_CS <= spi2dac:SPI1.port4
+DAC_SDI <= spi2dac:SPI1.port3
+DAC_LD <= spi2dac:SPI1.port6
+DAC_SCK <= spi2dac:SPI1.port5
+PWM_OUT <= pwm:PWM1.port3
 
 
 |ex11_top|divclk:DIV1

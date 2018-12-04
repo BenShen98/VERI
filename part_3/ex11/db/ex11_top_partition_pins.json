@@ -20,7 +20,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "pwm_out",
+					"name" : "PWM_OUT",
 					"strict" : false
 				},
 				{
