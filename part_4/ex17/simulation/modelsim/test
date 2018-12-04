@@ -1,0 +1,3 @@
+restart
+add fullsg tick_10k
+add -hexadecimal data_in data_out

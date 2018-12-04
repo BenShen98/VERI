@@ -1,0 +1,97 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ex17_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/spi2dac.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi2dac
+# 
+# Top level modules:
+# 	spi2dac
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/spi2adc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi2adc
+# 
+# Top level modules:
+# 	spi2adc
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/pwm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pwm
+# 
+# Top level modules:
+# 	pwm
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/hex_to_7seg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hex_to_7seg
+# 
+# Top level modules:
+# 	hex_to_7seg
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/clktick_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clktick_16
+# 
+# Top level modules:
+# 	clktick_16
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/ex17 {H:/VERI/part_4/ex17/ex17_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex17_top
+# 
+# Top level modules:
+# 	ex17_top
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/delay_0.8192ms.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_4/lib {H:/VERI/part_4/lib/FIFO_8192x10.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FIFO_8192x10
+# 
+# Top level modules:
+# 	FIFO_8192x10
+# 
+vsim work.ex17_top
+# vsim work.ex17_top 
+# Loading work.ex17_top
+# Loading work.clktick_16
+# Loading work.spi2dac
+# Loading work.pwm
+# Loading work.spi2adc
+# Loading work.processor
+# Loading work.FIFO_8192x10
+# ** Error: (vsim-3033) H:/VERI/part_4/lib/FIFO_8192x10.v(73): Instantiation of 'scfifo' failed. The design unit was not found.
+# 
+#         Region: /ex17_top/DELAY/BUFFER
+#         Searched libraries:
+#             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
+# Loading work.hex_to_7seg
+# Error loading design
+vsim work.FIFO_8192x10
+# vsim work.FIFO_8192x10 
+# Loading work.FIFO_8192x10
+# ** Error: (vsim-3033) H:/VERI/part_4/lib/FIFO_8192x10.v(73): Instantiation of 'scfifo' failed. The design unit was not found.
+# 
+#         Region: /FIFO_8192x10
+#         Searched libraries:
+#             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.processor
+# vsim work.processor 
+# Loading work.processor
+# Loading work.FIFO_8192x10
+# ** Error: (vsim-3033) H:/VERI/part_4/lib/FIFO_8192x10.v(73): Instantiation of 'scfifo' failed. The design unit was not found.
+# 
+#         Region: /processor/BUFFER
+#         Searched libraries:
+#             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
+# Error loading design
+# A time value could not be extracted from the current line
