@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Nov 30 18:21:42 2018
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fitter Status : Successful - Tue Dec 04 13:24:12 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : ex13_top
 Top-level Entity Name : ex13_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 47 / 32,070 ( < 1 % )
-Total registers : 92
+Total registers : 98
 Total pins : 6 / 457 ( 1 % )
 Total virtual pins : 0
 Total block memory bits : 10,240 / 4,065,280 ( < 1 % )

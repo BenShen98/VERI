@@ -1,17 +1,17 @@
 ------------------------------------------------------------
-Timing Analyzer Summary
+TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.127
-TNS   : -154.687
+Slack : -3.708
+TNS   : -178.314
 
 Type  : Slow 1100mV 85C Model Setup 'divclk:DIV|clk_out'
-Slack : -2.965
-TNS   : -39.614
+Slack : -3.099
+TNS   : -40.828
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.126
+Slack : 0.370
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'divclk:DIV|clk_out'
@@ -20,23 +20,23 @@ TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divclk:DIV|clk_out'
 Slack : -2.174
-TNS   : -68.758
+TNS   : -68.098
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.713
-TNS   : -61.454
-
-Type  : Slow 1100mV 0C Model Setup 'divclk:DIV|clk_out'
-Slack : -3.036
-TNS   : -40.704
+Slack : -0.749
+TNS   : -65.825
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.721
-TNS   : -144.454
+Slack : -3.330
+TNS   : -168.772
+
+Type  : Slow 1100mV 0C Model Setup 'divclk:DIV|clk_out'
+Slack : -3.157
+TNS   : -41.743
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.205
-TNS   : -1.997
+Slack : 0.158
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'divclk:DIV|clk_out'
 Slack : 0.751
@@ -44,22 +44,22 @@ TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divclk:DIV|clk_out'
 Slack : -2.174
-TNS   : -68.515
+TNS   : -67.943
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.748
-TNS   : -56.362
+Slack : -0.775
+TNS   : -59.885
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.632
-TNS   : -90.792
+Slack : -3.250
+TNS   : -103.661
 
 Type  : Fast 1100mV 85C Model Setup 'divclk:DIV|clk_out'
-Slack : -1.217
-TNS   : -14.894
+Slack : -1.303
+TNS   : -15.611
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.182
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'divclk:DIV|clk_out'
@@ -68,22 +68,22 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divclk:DIV|clk_out'
 Slack : -2.174
-TNS   : -68.608
+TNS   : -68.124
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.803
-TNS   : -41.738
+Slack : -0.809
+TNS   : -44.093
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.109
-TNS   : -71.988
+Slack : -2.637
+TNS   : -84.234
 
 Type  : Fast 1100mV 0C Model Setup 'divclk:DIV|clk_out'
-Slack : -1.171
-TNS   : -14.396
+Slack : -1.242
+TNS   : -14.989
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.100
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'divclk:DIV|clk_out'
@@ -92,10 +92,10 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divclk:DIV|clk_out'
 Slack : -2.174
-TNS   : -68.376
+TNS   : -67.958
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.829
-TNS   : -49.338
+Slack : -0.825
+TNS   : -52.339
 
 ------------------------------------------------------------
