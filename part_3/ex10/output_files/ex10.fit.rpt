@@ -1,5 +1,5 @@
 Fitter report for ex10
-Fri Nov 30 12:22:54 2018
+Tue Dec 04 12:19:26 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Nov 30 12:22:54 2018           ;
+; Fitter Status                   ; Successful - Tue Dec 04 12:19:26 2018           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex10                                            ;
 ; Top-level Entity Name           ; ex10_top                                        ;
@@ -1962,9 +1962,9 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file H:/VERI/part_3/ex10/output_files/ex10.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 2546 megabytes
-    Info: Processing ended: Fri Nov 30 12:22:56 2018
-    Info: Elapsed time: 00:00:32
+    Info: Peak virtual memory: 2547 megabytes
+    Info: Processing ended: Tue Dec 04 12:19:27 2018
+    Info: Elapsed time: 00:00:31
     Info: Total CPU time (on all processors): 00:00:54
 
 
