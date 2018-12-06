@@ -1,11 +1,12 @@
-module processor (sysclk, data_in, data_out);
+module processor (sysclk, data_in, data_out, data_valid);
 
 	input				sysclk;		// system clock
 	input [9:0]		data_in;		// 10-bit input data
+	input				data_valid;
 	output [9:0] 	data_out;	// 10-bit output data
 
-	reg rd;
-	wire				sysclk,fullsg;
+	reg Q;
+	wire				sysclk,fullsg,rd,pulse;
 	wire [9:0]		data_in;
 	reg [9:0] 		data_out;
 	wire [9:0]		x,delayed;
@@ -20,20 +21,20 @@ module processor (sysclk, data_in, data_out);
 		.clock(sysclk),
 		.data(x),
 		.rdreq(rd),
-		.wrreq(1'b1),
+		.wrreq(pulse),
 		.full(fullsg),
 		.q(delayed)
 	);
-		
+	
+	pulse_gen PULSE(pulse, data_valid, sysclk);
+	
+	assign rd = Q&pulse;
 	
 	// output 
 	always @(posedge sysclk)
-		if (fullsg==1'b1) begin
-			rd<=1'b1;
-			data_out <=  delayed + DAC_OFFSET;
-		end else begin
-			rd<=1'b0;
-			data_out <= DAC_OFFSET;
-		end
+	begin
+		Q<=fullsg;
+		data_out <=  (x + {delayed[9],delayed[9:1]}) + DAC_OFFSET;
+	end
 endmodule
 	
