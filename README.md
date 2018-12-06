@@ -121,3 +121,8 @@ describes a logic which simply passes the input to the output.
 * The output data is also corrected by adding an offset. In this case, we are adding h'200. This adjusts the
 analogue output signal to the range of 0-3.3V. 
 
+* One of the raw data output was passed to a Pulse-width modulator block. As a result, the generated output would be 
+square waves with different widths. The width of the square wave is proportional to the amplitude of the digital signal.
+In order to gain a suitable analogue output for earphones, it is required to pass this square wave into a low pass filter.
+
+
