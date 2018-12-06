@@ -7,7 +7,7 @@
 // Date:     23 Oct 2011
 //------------------------------
 
-module hex_to_7seg	(out,in);
+module hex_to_7seg	(in,out);
 
 	output	[6:0]	out;    // low-active output to drive 7 segment display
 	input	[3:0]	in;		// 4-bit binary input of a hexademical number
