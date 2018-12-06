@@ -88,3 +88,36 @@ The aim of this section is to generate a timer using the previous part.
 By modifiying the previous state machine, the new FSM looks like below\
 ![FSM](https://github.com/BenShen98/VERI/blob/master/part_2/img/ex9_state.png)
 
+## Part 3 Analogue I/O and SPI Interface
+
+### Add on board
+The additional board was designed by our lecturer Peter Cheung. This board provides the feature of digital to analogue conversion as well as pins which can be connected to the oscilloscope for debugging purposes. The following diagram indicates the internal circuitry diagram of the board.
+
+![internal circuit](https://github.com/BenShen98/VERI/blob/master/part_3/img/Screenshot%202018-12-06%20at%2014.24.27.png)
+
+* DAC_CS: Digital to Analougue converter, signal name: Chip select
+* DAC_SDI: Digital to Analougue converter, signal name: Serial Data input
+* DAC_SCK: Digital to Analougue converter, signal name: Serial Clock input
+* DAC_LD: Digital to Analougue converter, signal name: Load
+
+The same naming convention applies for the Analogue to Digital convertor.
+
+### Verify parallel input 
+According to the SPI2DAC proxy mentioned in lecture, the wave form h'23B after decoding should look like the diagram below.
+![wave form](https://github.com/BenShen98/VERI/blob/master/part_3/img/modelsim_spi10'h23b.PNG)
+
+## Part 4 Echo Synthesizer 
+
+### Digital circuit of audio signal processing
+The diagram below shows how different blocks are connected on the FPGA board.
+![echo](https://github.com/BenShen98/VERI/blob/master/part_4/img/Screenshot%202018-12-06%20at%2015.03.00.png)
+
+* The input data is subtracted by an offset since we are dealing with real analogue data which does not have
+negative voltages. In this case,we subtract h'181. The processer deals with two's complement signed numbers.
+
+* In the first experinment, we are required to verify that the main structure works. The allpass.v file 
+describes a logic which simply passes the input to the output.
+
+* The output data is also corrected by adding an offset. In this case, we are adding h'200. This adjusts the
+analogue output signal to the range of 0-3.3V. 
+
