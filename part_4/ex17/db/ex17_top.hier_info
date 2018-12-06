@@ -200,7 +200,7 @@ sdata_from_adc => shift_reg[0].DATAIN
 
 
 |ex17_top|processor:DELAY
-sysclk => sysclk.IN1
+sysclk => sysclk.IN2
 data_in[0] => Add0.IN20
 data_in[1] => Add0.IN19
 data_in[2] => Add0.IN18
@@ -221,6 +221,7 @@ data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_valid => data_valid.IN1
 
 
 |ex17_top|processor:DELAY|FIFO_8192x10:BUFFER
@@ -855,6 +856,15 @@ sclr => counter_reg_bit[3].SCLR
 sclr => counter_reg_bit[2].SCLR
 sclr => counter_reg_bit[1].SCLR
 sclr => counter_reg_bit[0].SCLR
+
+
+|ex17_top|processor:DELAY|pulse_gen:PULSE
+pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => pulse.DATAB
+in => Selector0.IN1
+in => state.IDLE.DATAIN
+clk => pulse~reg0.CLK
+clk => state~1.DATAIN
 
 
 |ex17_top|hex_to_7seg:SEG0

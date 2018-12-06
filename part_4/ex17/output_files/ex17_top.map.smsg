@@ -33,3 +33,4 @@ Info (10281): Verilog HDL Declaration information at bin2bcd_16.v(22): object "a
 Info (10281): Verilog HDL Declaration information at bin2bcd_16.v(22): object "a33" differs only in case from object "A33" in the same scope File: H:/VERI/part_4/lib/bin2bcd_16.v Line: 22
 Info (10281): Verilog HDL Declaration information at bin2bcd_16.v(22): object "a34" differs only in case from object "A34" in the same scope File: H:/VERI/part_4/lib/bin2bcd_16.v Line: 22
 Info (10281): Verilog HDL Declaration information at bin2bcd_16.v(22): object "a35" differs only in case from object "A35" in the same scope File: H:/VERI/part_4/lib/bin2bcd_16.v Line: 22
+Info (10281): Verilog HDL Declaration information at delay_0.8192ms.v(9): object "pulse" differs only in case from object "PULSE" in the same scope File: H:/VERI/part_4/lib/delay_0.8192ms.v Line: 9

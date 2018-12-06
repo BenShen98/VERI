@@ -75,6 +75,8 @@ vsim work.ex17_top
 #             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
 # Loading work.hex_to_7seg
 # Error loading design
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
 vsim work.FIFO_8192x10
 # vsim work.FIFO_8192x10 
 # Loading work.FIFO_8192x10
@@ -84,14 +86,51 @@ vsim work.FIFO_8192x10
 #         Searched libraries:
 #             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
 # Error loading design
-vsim work.processor
-# vsim work.processor 
-# Loading work.processor
+vsim work.FIFO_8192x10
+# vsim work.FIFO_8192x10 
 # Loading work.FIFO_8192x10
 # ** Error: (vsim-3033) H:/VERI/part_4/lib/FIFO_8192x10.v(73): Instantiation of 'scfifo' failed. The design unit was not found.
 # 
-#         Region: /processor/BUFFER
+#         Region: /FIFO_8192x10
+#         Searched libraries:
+#             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
+# Error loading design
+vsim rtl_work.ex17_top
+# vsim rtl_work.ex17_top 
+# Loading rtl_work.ex17_top
+# Loading rtl_work.clktick_16
+# Loading rtl_work.spi2dac
+# Loading rtl_work.pwm
+# Loading rtl_work.spi2adc
+# Loading rtl_work.processor
+# Loading rtl_work.FIFO_8192x10
+# ** Error: (vsim-3033) H:/VERI/part_4/lib/FIFO_8192x10.v(73): Instantiation of 'scfifo' failed. The design unit was not found.
+# 
+#         Region: /ex17_top/DELAY/BUFFER
+#         Searched libraries:
+#             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
+# Loading rtl_work.hex_to_7seg
+# Error loading design
+vsim rtl_work.FIFO_8192x10
+# vsim rtl_work.FIFO_8192x10 
+# Loading rtl_work.FIFO_8192x10
+# ** Error: (vsim-3033) H:/VERI/part_4/lib/FIFO_8192x10.v(73): Instantiation of 'scfifo' failed. The design unit was not found.
+# 
+#         Region: /FIFO_8192x10
 #         Searched libraries:
 #             H:/VERI/part_4/ex17/simulation/modelsim/rtl_work
 # Error loading design
 # A time value could not be extracted from the current line
+vsim altera_mf.scfifo
+# vsim altera_mf.scfifo 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.scfifo(behavior)
+# ** Fatal: (vsim-3350) Generic "lpm_width" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /scfifo File: C:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/vhdl/src/altera_mf/altera_mf.vhd Line: 45082
+# FATAL ERROR while loading design
+# Error loading design

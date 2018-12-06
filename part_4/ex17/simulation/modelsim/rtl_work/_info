@@ -19,7 +19,7 @@ Z4 !s92 -vlog01compat -work work +incdir+H:/VERI/part_4/lib -O0
 !i10b 1
 !s100 __ZdAS641RAH1<l9TYSdl1
 !s85 0
-!s108 1543942817.011000
+!s108 1544091224.867000
 !s107 H:/VERI/part_4/lib/clktick_16.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/clktick_16.v|
 !s101 -O0
@@ -38,7 +38,7 @@ R3
 !i10b 1
 !s100 ]JPJbAR=6^@9VWM1^KJ=c1
 !s85 0
-!s108 1543942817.291000
+!s108 1544091225.073000
 !s107 H:/VERI/part_4/ex17/ex17_top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/ex17|H:/VERI/part_4/ex17/ex17_top.v|
 !s101 -O0
@@ -57,7 +57,7 @@ R2
 r1
 !s85 0
 31
-!s108 1543942817.700000
+!s108 1544091225.429000
 !s107 H:/VERI/part_4/lib/FIFO_8192x10.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/FIFO_8192x10.v|
 !s101 -O0
@@ -80,7 +80,7 @@ R4
 !i10b 1
 !s100 G2@i61L@md1O2I_[kYeP60
 !s85 0
-!s108 1543942816.792000
+!s108 1544091224.692000
 !s107 H:/VERI/part_4/lib/hex_to_7seg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/hex_to_7seg.v|
 !s101 -O0
@@ -88,7 +88,7 @@ vprocessor
 IW9m1iChSfk3_VTLg6=`kQ0
 Vd<XGQiEJ`0V8Zgg5n^_7C0
 R1
-w1543942674
+w1543942964
 8H:/VERI/part_4/lib/delay_0.8192ms.v
 FH:/VERI/part_4/lib/delay_0.8192ms.v
 L0 1
@@ -100,7 +100,7 @@ R4
 !i10b 1
 !s100 zDg]??;N1D<>N51@a:l<93
 !s85 0
-!s108 1543942817.495000
+!s108 1544091225.260000
 !s107 H:/VERI/part_4/lib/delay_0.8192ms.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/delay_0.8192ms.v|
 !s101 -O0
@@ -120,7 +120,7 @@ R4
 !i10b 1
 !s100 hWbnD?@VE8_N^Igm411]T0
 !s85 0
-!s108 1543942816.607000
+!s108 1544091223.560000
 !s107 H:/VERI/part_4/lib/pwm.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/pwm.v|
 !s101 -O0
@@ -140,7 +140,7 @@ R4
 !i10b 1
 !s100 FG=gm_E4Mi]96f^4^Q7Z`1
 !s85 0
-!s108 1543942816.430000
+!s108 1544091223.346000
 !s107 H:/VERI/part_4/lib/spi2adc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/spi2adc.v|
 !s101 -O0
@@ -160,7 +160,7 @@ R4
 !i10b 1
 !s100 6_XRl[5MRz7ai<3UQE7kz3
 !s85 0
-!s108 1543942816.061000
+!s108 1544091223.122000
 !s107 H:/VERI/part_4/lib/spi2dac.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/part_4/lib|H:/VERI/part_4/lib/spi2dac.v|
 !s101 -O0

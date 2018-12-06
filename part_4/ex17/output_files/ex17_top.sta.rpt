@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ex17_top
-Tue Dec 04 17:04:19 2018
+Thu Dec 06 10:53:47 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -101,14 +101,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.11        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.4%      ;
-;     Processor 3            ;   3.4%      ;
-;     Processor 4            ;   3.3%      ;
+;     Processor 2            ;   3.6%      ;
+;     Processor 3            ;   3.5%      ;
+;     Processor 4            ;   3.5%      ;
 +----------------------------+-------------+
 
 
@@ -117,7 +117,7 @@ agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; ex17_top.sdc  ; OK     ; Tue Dec 04 17:04:13 2018 ;
+; ex17_top.sdc  ; OK     ; Thu Dec 06 10:53:41 2018 ;
 +---------------+--------+--------------------------+
 
 
@@ -135,7 +135,7 @@ agreement for further details.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 256.54 MHz ; 256.54 MHz      ; CLOCK_50   ;      ;
+; 189.25 MHz ; 189.25 MHz      ; CLOCK_50   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -151,7 +151,7 @@ HTML report is unavailable in plain text report export.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; 16.102 ; 0.000           ;
+; CLOCK_50 ; 14.716 ; 0.000           ;
 +----------+--------+-----------------+
 
 
@@ -160,7 +160,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.232 ; 0.000           ;
+; CLOCK_50 ; 0.372 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -181,7 +181,7 @@ No paths to report.
 +----------+-------+--------------------------------+
 ; Clock    ; Slack ; End Point TNS                  ;
 +----------+-------+--------------------------------+
-; CLOCK_50 ; 8.831 ; 0.000                          ;
+; CLOCK_50 ; 8.850 ; 0.000                          ;
 +----------+-------+--------------------------------+
 
 
@@ -196,7 +196,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 250.75 MHz ; 250.75 MHz      ; CLOCK_50   ;      ;
+; 183.65 MHz ; 183.65 MHz      ; CLOCK_50   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -206,7 +206,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; 16.012 ; 0.000          ;
+; CLOCK_50 ; 14.555 ; 0.000          ;
 +----------+--------+----------------+
 
 
@@ -215,7 +215,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.220 ; 0.000          ;
+; CLOCK_50 ; 0.375 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -236,7 +236,7 @@ No paths to report.
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; CLOCK_50 ; 8.780 ; 0.000                         ;
+; CLOCK_50 ; 8.793 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
@@ -251,7 +251,7 @@ No synchronizer chains to report.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; 17.479 ; 0.000           ;
+; CLOCK_50 ; 16.779 ; 0.000           ;
 +----------+--------+-----------------+
 
 
@@ -260,7 +260,7 @@ No synchronizer chains to report.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.136 ; 0.000           ;
+; CLOCK_50 ; 0.183 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -296,7 +296,7 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; 17.592 ; 0.000          ;
+; CLOCK_50 ; 16.886 ; 0.000          ;
 +----------+--------+----------------+
 
 
@@ -305,7 +305,7 @@ No synchronizer chains to report.
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.124 ; 0.000          ;
+; CLOCK_50 ; 0.175 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -341,8 +341,8 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 16.012 ; 0.124 ; N/A      ; N/A     ; 8.437               ;
-;  CLOCK_50        ; 16.012 ; 0.124 ; N/A      ; N/A     ; 8.437               ;
+; Worst-case Slack ; 14.555 ; 0.175 ; N/A      ; N/A     ; 8.437               ;
+;  CLOCK_50        ; 14.555 ; 0.175 ; N/A      ; N/A     ; 8.437               ;
 ; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  CLOCK_50        ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +------------------+--------+-------+----------+---------+---------------------+
@@ -558,7 +558,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 1292     ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 1442     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -568,7 +568,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 1292     ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 1442     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -706,7 +706,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Tue Dec 04 17:04:11 2018
+    Info: Processing started: Thu Dec 06 10:53:39 2018
 Info: Command: quartus_sta ex17 -c ex17_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -715,65 +715,65 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'ex17_top.sdc'
 Warning (332060): Node: spi2adc:SPI_ADC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register spi2adc:SPI_ADC|data_from_adc[3] is being clocked by spi2adc:SPI_ADC|clk_1MHz
+    Info (13166): Register spi2adc:SPI_ADC|adc_cs is being clocked by spi2adc:SPI_ADC|clk_1MHz
 Warning (332060): Node: spi2dac:SPI_DAC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register spi2dac:SPI_DAC|shift_reg[11] is being clocked by spi2dac:SPI_DAC|clk_1MHz
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 16.102
+Info (332146): Worst-case setup slack is 14.716
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    16.102               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.232
+    Info (332119):    14.716               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.372
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.232               0.000 CLOCK_50 
+    Info (332119):     0.372               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 8.831
+Info (332146): Worst-case minimum pulse width slack is 8.850
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.831               0.000 CLOCK_50 
+    Info (332119):     8.850               0.000 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: spi2adc:SPI_ADC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register spi2adc:SPI_ADC|data_from_adc[3] is being clocked by spi2adc:SPI_ADC|clk_1MHz
+    Info (13166): Register spi2adc:SPI_ADC|adc_cs is being clocked by spi2adc:SPI_ADC|clk_1MHz
 Warning (332060): Node: spi2dac:SPI_DAC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register spi2dac:SPI_DAC|shift_reg[11] is being clocked by spi2dac:SPI_DAC|clk_1MHz
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 16.012
+Info (332146): Worst-case setup slack is 14.555
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    16.012               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.220
+    Info (332119):    14.555               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.375
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.220               0.000 CLOCK_50 
+    Info (332119):     0.375               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 8.780
+Info (332146): Worst-case minimum pulse width slack is 8.793
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.780               0.000 CLOCK_50 
+    Info (332119):     8.793               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: spi2adc:SPI_ADC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register spi2adc:SPI_ADC|data_from_adc[3] is being clocked by spi2adc:SPI_ADC|clk_1MHz
+    Info (13166): Register spi2adc:SPI_ADC|adc_cs is being clocked by spi2adc:SPI_ADC|clk_1MHz
 Warning (332060): Node: spi2dac:SPI_DAC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register spi2dac:SPI_DAC|shift_reg[11] is being clocked by spi2dac:SPI_DAC|clk_1MHz
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 17.479
+Info (332146): Worst-case setup slack is 16.779
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.479               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.136
+    Info (332119):    16.779               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.183
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.136               0.000 CLOCK_50 
+    Info (332119):     0.183               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 8.480
@@ -782,18 +782,18 @@ Info (332146): Worst-case minimum pulse width slack is 8.480
     Info (332119):     8.480               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 0C Model
 Warning (332060): Node: spi2adc:SPI_ADC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register spi2adc:SPI_ADC|data_from_adc[3] is being clocked by spi2adc:SPI_ADC|clk_1MHz
+    Info (13166): Register spi2adc:SPI_ADC|adc_cs is being clocked by spi2adc:SPI_ADC|clk_1MHz
 Warning (332060): Node: spi2dac:SPI_DAC|clk_1MHz was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register spi2dac:SPI_DAC|shift_reg[11] is being clocked by spi2dac:SPI_DAC|clk_1MHz
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 17.592
+Info (332146): Worst-case setup slack is 16.886
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.592               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.124
+    Info (332119):    16.886               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.175
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.124               0.000 CLOCK_50 
+    Info (332119):     0.175               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 8.437
@@ -804,7 +804,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 1233 megabytes
-    Info: Processing ended: Tue Dec 04 17:04:19 2018
+    Info: Processing ended: Thu Dec 06 10:53:47 2018
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
