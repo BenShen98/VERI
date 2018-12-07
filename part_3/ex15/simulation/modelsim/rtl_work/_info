@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VERI\part_3\ex15\simulation\modelsim
+vclktoggle_16
+!i10b 1
+!s100 EJ80Q602?kgmeBWZ<P8^^1
+IHOL2RG^;eFdAnXI`1fG4D2
+VRUNolh_lVTa;[8AWcijl23
+Z1 dH:\VERI\part_3\ex15\simulation\modelsim
+w1544174943
+8H:/VERI/lib/clktoggle_16.v
+FH:/VERI/lib/clktoggle_16.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1544174988.794000
+!s107 H:/VERI/lib/clktoggle_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/lib|H:/VERI/lib/clktoggle_16.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+H:/VERI/lib -O0

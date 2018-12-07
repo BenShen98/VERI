@@ -1,0 +1,857 @@
+Analysis & Synthesis report for ex15_top
+Fri Dec 07 09:54:12 2018
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |ex15_top|spi2dac:SPI1|sr_state
+ 11. State Machine - |ex15_top|spi2adc:SPI_ADC|sr_state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Source assignments for rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated
+ 17. Parameter Settings for User Entity Instance: clktick_16:clk
+ 18. Parameter Settings for User Entity Instance: spi2adc:SPI_ADC
+ 19. Parameter Settings for User Entity Instance: mul_10x14:MUL|lpm_mult:lpm_mult_component
+ 20. Parameter Settings for User Entity Instance: rom:SINWAVE|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: spi2dac:SPI1
+ 22. lpm_mult Parameter Settings by Entity Instance
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A31"
+ 25. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A19"
+ 26. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A10"
+ 27. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A4"
+ 28. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A1"
+ 29. Port Connectivity Checks: "bin2bcd_16:BIN2BCD"
+ 30. Port Connectivity Checks: "mul_10x14:MUL"
+ 31. Port Connectivity Checks: "spi2adc:SPI_ADC"
+ 32. Port Connectivity Checks: "clktick_16:clk"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Dec 07 09:54:12 2018           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; ex15_top                                        ;
+; Top-level Entity Name           ; ex15_top                                        ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 123                                             ;
+; Total pins                      ; 45                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 10,240                                          ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; ex15_top           ; ex15_top           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------+---------+
+; ../../lib/sinwave/rom.v          ; yes             ; User Wizard-Generated File             ; H:/VERI/lib/sinwave/rom.v                                              ;         ;
+; ../../lib/7seg/hex_to_7seg.v     ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/7seg/hex_to_7seg.v                                         ;         ;
+; ../../lib/7seg/bin2bcd_16.v      ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/7seg/bin2bcd_16.v                                          ;         ;
+; ../../lib/7seg/add3_ge5.v        ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/7seg/add3_ge5.v                                            ;         ;
+; ../../lib/interface/spi2dac.v    ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/interface/spi2dac.v                                        ;         ;
+; ../../lib/interface/spi2adc.v    ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/interface/spi2adc.v                                        ;         ;
+; ../../lib/interface/pwm.v        ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/interface/pwm.v                                            ;         ;
+; mul_10x14.v                      ; yes             ; User Wizard-Generated File             ; H:/VERI/part_3/ex15/mul_10x14.v                                        ;         ;
+; ../../lib/clktick_16.v           ; yes             ; User Verilog HDL File                  ; H:/VERI/lib/clktick_16.v                                               ;         ;
+; ex15_top.v                       ; yes             ; User Verilog HDL File                  ; H:/VERI/part_3/ex15/ex15_top.v                                         ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/aglobal160.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_d9h.tdf               ; yes             ; Auto-Generated Megafunction            ; H:/VERI/part_3/ex15/db/add_sub_d9h.tdf                                 ;         ;
+; db/add_sub_89h.tdf               ; yes             ; Auto-Generated Megafunction            ; H:/VERI/part_3/ex15/db/add_sub_89h.tdf                                 ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/16.0/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_03j1.tdf           ; yes             ; Auto-Generated Megafunction            ; H:/VERI/part_3/ex15/db/altsyncram_03j1.tdf                             ;         ;
+; /veri/lib/sinwave/rom_data.mif   ; yes             ; Auto-Found Memory Initialization File  ; /veri/lib/sinwave/rom_data.mif                                         ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 144            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 251            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 20             ;
+;     -- 5 input functions                    ; 22             ;
+;     -- 4 input functions                    ; 126            ;
+;     -- <=3 input functions                  ; 83             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 123            ;
+;                                             ;                ;
+; I/O pins                                    ; 45             ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 10240          ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 63             ;
+; Total fan-out                               ; 1453           ;
+; Average fan-out                             ; 3.07           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                        ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name     ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |ex15_top                                         ; 251 (10)          ; 123 (20)     ; 10240             ; 0          ; 45   ; 0            ; |ex15_top                                                                                                                                                   ; ex15_top        ; work         ;
+;    |bin2bcd_16:BIN2BCD|                           ; 97 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD                                                                                                                                ; bin2bcd_16      ; work         ;
+;       |add3_ge5:A11|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A11                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A12|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A12                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A14|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A14                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A15|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A15                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A16|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A16                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A17|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A17                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A18|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A18                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A20|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A20                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A21|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A21                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A22|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A22                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A24|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A24                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A25|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A25                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A26|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A26                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A27|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A27                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A28|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A28                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A29|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A29                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A30|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A30                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A32|                              ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A32                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A33|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A33                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A34|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A34                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A35|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A35                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A3|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A3                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A5|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A5                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A7|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A7                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A8|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A8                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A9|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|bin2bcd_16:BIN2BCD|add3_ge5:A9                                                                                                                    ; add3_ge5        ; work         ;
+;    |clktick_16:clk|                               ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|clktick_16:clk                                                                                                                                    ; clktick_16      ; work         ;
+;    |hex_to_7seg:SEG0|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|hex_to_7seg:SEG0                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |hex_to_7seg:SEG1|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|hex_to_7seg:SEG1                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |hex_to_7seg:SEG2|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|hex_to_7seg:SEG2                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |hex_to_7seg:SEG3|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|hex_to_7seg:SEG3                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |hex_to_7seg:SEG4|                             ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|hex_to_7seg:SEG4                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |mul_10x14:MUL|                                ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL                                                                                                                                     ; mul_10x14       ; work         ;
+;       |lpm_mult:lpm_mult_component|               ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component                                                                                                         ; lpm_mult        ; work         ;
+;          |multcore:mult_core|                     ; 36 (6)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                      ; multcore        ; work         ;
+;             |mpar_add:padder|                     ; 30 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 18 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
+;                   |add_sub_d9h:auto_generated|    ; 18 (18)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated                      ; add_sub_d9h     ; work         ;
+;                |mpar_add:sub_par_add|             ; 12 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 12 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
+;                      |add_sub_89h:auto_generated| ; 12 (12)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_89h:auto_generated ; add_sub_89h     ; work         ;
+;    |pwm:PWM1|                                     ; 16 (16)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|pwm:PWM1                                                                                                                                          ; pwm             ; work         ;
+;    |rom:SINWAVE|                                  ; 0 (0)             ; 0 (0)        ; 10240             ; 0          ; 0    ; 0            ; |ex15_top|rom:SINWAVE                                                                                                                                       ; rom             ; work         ;
+;       |altsyncram:altsyncram_component|           ; 0 (0)             ; 0 (0)        ; 10240             ; 0          ; 0    ; 0            ; |ex15_top|rom:SINWAVE|altsyncram:altsyncram_component                                                                                                       ; altsyncram      ; work         ;
+;          |altsyncram_03j1:auto_generated|         ; 0 (0)             ; 0 (0)        ; 10240             ; 0          ; 0    ; 0            ; |ex15_top|rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated                                                                        ; altsyncram_03j1 ; work         ;
+;    |spi2adc:SPI_ADC|                              ; 21 (21)           ; 39 (39)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|spi2adc:SPI_ADC                                                                                                                                   ; spi2adc         ; work         ;
+;    |spi2dac:SPI1|                                 ; 20 (20)           ; 26 (26)      ; 0                 ; 0          ; 0    ; 0            ; |ex15_top|spi2dac:SPI1                                                                                                                                      ; spi2dac         ; work         ;
++---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                               ;
++---------------------------------------------------------------------------------------+------------+------+--------------+--------------+--------------+--------------+-------+--------------------------------+
+; Name                                                                                  ; Type       ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                            ;
++---------------------------------------------------------------------------------------+------------+------+--------------+--------------+--------------+--------------+-------+--------------------------------+
+; rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated|ALTSYNCRAM ; M10K block ; ROM  ; 1024         ; 10           ; --           ; --           ; 10240 ; ../../lib/sinwave/rom_data.mif ;
++---------------------------------------------------------------------------------------+------------+------+--------------+--------------+--------------+--------------+-------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                             ;
++--------+--------------+---------+--------------+--------------+-------------------------+-------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance         ; IP Include File         ;
++--------+--------------+---------+--------------+--------------+-------------------------+-------------------------+
+; Altera ; LPM_MULT     ; 16.0    ; N/A          ; N/A          ; |ex15_top|mul_10x14:MUL ; mul_10x14.v             ;
+; Altera ; ROM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |ex15_top|rom:SINWAVE   ; ../../lib/sinwave/rom.v ;
++--------+--------------+---------+--------------+--------------+-------------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------+
+; State Machine - |ex15_top|spi2dac:SPI1|sr_state                                          ;
++------------------------+---------------+------------------------+------------------------+
+; Name                   ; sr_state.IDLE ; sr_state.WAIT_CSB_HIGH ; sr_state.WAIT_CSB_FALL ;
++------------------------+---------------+------------------------+------------------------+
+; sr_state.IDLE          ; 0             ; 0                      ; 0                      ;
+; sr_state.WAIT_CSB_FALL ; 1             ; 0                      ; 1                      ;
+; sr_state.WAIT_CSB_HIGH ; 1             ; 1                      ; 0                      ;
++------------------------+---------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------+
+; State Machine - |ex15_top|spi2adc:SPI_ADC|sr_state                                       ;
++------------------------+---------------+------------------------+------------------------+
+; Name                   ; sr_state.IDLE ; sr_state.WAIT_CSB_HIGH ; sr_state.WAIT_CSB_FALL ;
++------------------------+---------------+------------------------+------------------------+
+; sr_state.IDLE          ; 0             ; 0                      ; 0                      ;
+; sr_state.WAIT_CSB_FALL ; 1             ; 0                      ; 1                      ;
+; sr_state.WAIT_CSB_HIGH ; 1             ; 1                      ; 0                      ;
++------------------------+---------------+------------------------+------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; spi2dac:SPI1|shift_reg[0,1]           ; Stuck at GND due to stuck port data_in ;
+; spi2dac:SPI1|ctr[4]                   ; Merged with spi2adc:SPI_ADC|ctr[4]     ;
+; spi2dac:SPI1|ctr[3]                   ; Merged with spi2adc:SPI_ADC|ctr[3]     ;
+; spi2dac:SPI1|ctr[2]                   ; Merged with spi2adc:SPI_ADC|ctr[2]     ;
+; spi2dac:SPI1|ctr[1]                   ; Merged with spi2adc:SPI_ADC|ctr[1]     ;
+; spi2dac:SPI1|ctr[0]                   ; Merged with spi2adc:SPI_ADC|ctr[0]     ;
+; Total Number of Removed Registers = 7 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                    ;
++---------------------------+---------------------------+----------------------------------------+
+; Register name             ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------------+---------------------------+----------------------------------------+
+; spi2dac:SPI1|shift_reg[0] ; Stuck at GND              ; spi2dac:SPI1|shift_reg[1]              ;
+;                           ; due to stuck port data_in ;                                        ;
++---------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 123   ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; spi2dac:SPI1|dac_cs                    ; 12      ;
+; spi2adc:SPI_ADC|adc_cs                 ; 17      ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------+
+; Assignment                      ; Value              ; From ; To                                  ;
++---------------------------------+--------------------+------+-------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
++---------------------------------+--------------------+------+-------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clktick_16:clk ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; N_BIT          ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi2adc:SPI_ADC ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; SGL            ; 1     ; Unsigned Binary                     ;
+; MSBF           ; 1     ; Unsigned Binary                     ;
+; TIME_CONSTANT  ; 11000 ; Unsigned Binary                     ;
+; IDLE           ; 00    ; Unsigned Binary                     ;
+; WAIT_CSB_FALL  ; 01    ; Unsigned Binary                     ;
+; WAIT_CSB_HIGH  ; 10    ; Unsigned Binary                     ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_10x14:MUL|lpm_mult:lpm_mult_component ;
++------------------------------------------------+-----------+---------------------------+
+; Parameter Name                                 ; Value     ; Type                      ;
++------------------------------------------------+-----------+---------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE            ;
+; LPM_WIDTHA                                     ; 10        ; Signed Integer            ;
+; LPM_WIDTHB                                     ; 14        ; Signed Integer            ;
+; LPM_WIDTHP                                     ; 24        ; Signed Integer            ;
+; LPM_WIDTHR                                     ; 0         ; Untyped                   ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                   ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                   ;
+; LATENCY                                        ; 0         ; Untyped                   ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; INPUT_B_IS_CONSTANT                            ; YES       ; Untyped                   ;
+; USE_EAB                                        ; OFF       ; Untyped                   ;
+; MAXIMIZE_SPEED                                 ; 5         ; Untyped                   ;
+; DEVICE_FAMILY                                  ; Cyclone V ; Untyped                   ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT       ; TECH_MAPPER_APEX20K       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                   ;
+; CBXI_PARAMETER                                 ; NOTHING   ; Untyped                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                   ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF       ; Untyped                   ;
++------------------------------------------------+-----------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rom:SINWAVE|altsyncram:altsyncram_component ;
++------------------------------------+--------------------------------+--------------------+
+; Parameter Name                     ; Value                          ; Type               ;
++------------------------------------+--------------------------------+--------------------+
+; BYTE_SIZE_BLOCK                    ; 8                              ; Untyped            ;
+; AUTO_CARRY_CHAINS                  ; ON                             ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                            ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS                ; ON                             ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                            ; IGNORE_CASCADE     ;
+; WIDTH_BYTEENA                      ; 1                              ; Untyped            ;
+; OPERATION_MODE                     ; ROM                            ; Untyped            ;
+; WIDTH_A                            ; 10                             ; Signed Integer     ;
+; WIDTHAD_A                          ; 10                             ; Signed Integer     ;
+; NUMWORDS_A                         ; 1024                           ; Signed Integer     ;
+; OUTDATA_REG_A                      ; CLOCK0                         ; Untyped            ;
+; ADDRESS_ACLR_A                     ; NONE                           ; Untyped            ;
+; OUTDATA_ACLR_A                     ; NONE                           ; Untyped            ;
+; WRCONTROL_ACLR_A                   ; NONE                           ; Untyped            ;
+; INDATA_ACLR_A                      ; NONE                           ; Untyped            ;
+; BYTEENA_ACLR_A                     ; NONE                           ; Untyped            ;
+; WIDTH_B                            ; 1                              ; Untyped            ;
+; WIDTHAD_B                          ; 1                              ; Untyped            ;
+; NUMWORDS_B                         ; 1                              ; Untyped            ;
+; INDATA_REG_B                       ; CLOCK1                         ; Untyped            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                         ; Untyped            ;
+; RDCONTROL_REG_B                    ; CLOCK1                         ; Untyped            ;
+; ADDRESS_REG_B                      ; CLOCK1                         ; Untyped            ;
+; OUTDATA_REG_B                      ; UNREGISTERED                   ; Untyped            ;
+; BYTEENA_REG_B                      ; CLOCK1                         ; Untyped            ;
+; INDATA_ACLR_B                      ; NONE                           ; Untyped            ;
+; WRCONTROL_ACLR_B                   ; NONE                           ; Untyped            ;
+; ADDRESS_ACLR_B                     ; NONE                           ; Untyped            ;
+; OUTDATA_ACLR_B                     ; NONE                           ; Untyped            ;
+; RDCONTROL_ACLR_B                   ; NONE                           ; Untyped            ;
+; BYTEENA_ACLR_B                     ; NONE                           ; Untyped            ;
+; WIDTH_BYTEENA_A                    ; 1                              ; Signed Integer     ;
+; WIDTH_BYTEENA_B                    ; 1                              ; Untyped            ;
+; RAM_BLOCK_TYPE                     ; M10K                           ; Untyped            ;
+; BYTE_SIZE                          ; 8                              ; Untyped            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                      ; Untyped            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ           ; Untyped            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ           ; Untyped            ;
+; INIT_FILE                          ; ../../lib/sinwave/rom_data.mif ; Untyped            ;
+; INIT_FILE_LAYOUT                   ; PORT_A                         ; Untyped            ;
+; MAXIMUM_DEPTH                      ; 0                              ; Untyped            ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                         ; Untyped            ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                         ; Untyped            ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                         ; Untyped            ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                         ; Untyped            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                ; Untyped            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                ; Untyped            ;
+; ENABLE_ECC                         ; FALSE                          ; Untyped            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                          ; Untyped            ;
+; WIDTH_ECCSTATUS                    ; 3                              ; Untyped            ;
+; DEVICE_FAMILY                      ; Cyclone V                      ; Untyped            ;
+; CBXI_PARAMETER                     ; altsyncram_03j1                ; Untyped            ;
++------------------------------------+--------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi2dac:SPI1 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; BUF            ; 1     ; Unsigned Binary                  ;
+; GA_N           ; 1     ; Unsigned Binary                  ;
+; SHDN_N         ; 1     ; Unsigned Binary                  ;
+; TIME_CONSTANT  ; 11000 ; Unsigned Binary                  ;
+; IDLE           ; 00    ; Unsigned Binary                  ;
+; WAIT_CSB_FALL  ; 01    ; Unsigned Binary                  ;
+; WAIT_CSB_HIGH  ; 10    ; Unsigned Binary                  ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                    ;
++---------------------------------------+-------------------------------------------+
+; Name                                  ; Value                                     ;
++---------------------------------------+-------------------------------------------+
+; Number of entity instances            ; 1                                         ;
+; Entity Instance                       ; mul_10x14:MUL|lpm_mult:lpm_mult_component ;
+;     -- LPM_WIDTHA                     ; 10                                        ;
+;     -- LPM_WIDTHB                     ; 14                                        ;
+;     -- LPM_WIDTHP                     ; 24                                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                        ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                       ;
+;     -- USE_EAB                        ; OFF                                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                        ;
++---------------------------------------+-------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                        ;
++-------------------------------------------+---------------------------------------------+
+; Name                                      ; Value                                       ;
++-------------------------------------------+---------------------------------------------+
+; Number of entity instances                ; 1                                           ;
+; Entity Instance                           ; rom:SINWAVE|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                         ;
+;     -- WIDTH_A                            ; 10                                          ;
+;     -- NUMWORDS_A                         ; 1024                                        ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                      ;
+;     -- WIDTH_B                            ; 1                                           ;
+;     -- NUMWORDS_B                         ; 1                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                   ;
++-------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A31"                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; w[3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; a[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A19" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; w[3] ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A10" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; w[3] ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A4" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; w[3] ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A1" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; w[3] ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD"                                                                                                                          ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                       ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; B    ; Input ; Warning  ; Input port expression (14 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "B[15..14]" will be connected to GND. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mul_10x14:MUL"                                                                              ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; result[9..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "spi2adc:SPI_ADC" ;
++---------+-------+----------+----------------+
+; Port    ; Type  ; Severity ; Details        ;
++---------+-------+----------+----------------+
+; channel ; Input ; Info     ; Stuck at GND   ;
++---------+-------+----------+----------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "clktick_16:clk"  ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; enable    ; Input ; Info     ; Stuck at VCC ;
+; N[9..7]   ; Input ; Info     ; Stuck at VCC ;
+; N[2..0]   ; Input ; Info     ; Stuck at VCC ;
+; N[15..13] ; Input ; Info     ; Stuck at GND ;
+; N[11..10] ; Input ; Info     ; Stuck at GND ;
+; N[6..3]   ; Input ; Info     ; Stuck at GND ;
+; N[12]     ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 123                         ;
+;     ENA               ; 42                          ;
+;     SCLR              ; 9                           ;
+;     SLD               ; 9                           ;
+;     plain             ; 63                          ;
+; arriav_lcell_comb     ; 274                         ;
+;     arith             ; 65                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 6                           ;
+;     normal            ; 209                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 121                         ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 20                          ;
+; boundary_port         ; 45                          ;
+; stratixv_ram_block    ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 8.12                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Fri Dec 07 09:53:59 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex15 -c ex15_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/sinwave/rom.v
+    Info (12023): Found entity 1: rom File: H:/VERI/lib/sinwave/rom.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/7seg/hex_to_7seg.v
+    Info (12023): Found entity 1: hex_to_7seg File: H:/VERI/lib/7seg/hex_to_7seg.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/7seg/bin2bcd_16.v
+    Info (12023): Found entity 1: bin2bcd_16 File: H:/VERI/lib/7seg/bin2bcd_16.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/7seg/add3_ge5.v
+    Info (12023): Found entity 1: add3_ge5 File: H:/VERI/lib/7seg/add3_ge5.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/interface/spi2dac.v
+    Info (12023): Found entity 1: spi2dac File: H:/VERI/lib/interface/spi2dac.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/interface/spi2adc.v
+    Info (12023): Found entity 1: spi2adc File: H:/VERI/lib/interface/spi2adc.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/interface/pwm.v
+    Info (12023): Found entity 1: pwm File: H:/VERI/lib/interface/pwm.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mul_10x14.v
+    Info (12023): Found entity 1: mul_10x14 File: H:/VERI/part_3/ex15/mul_10x14.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /veri/lib/clktick_16.v
+    Info (12023): Found entity 1: clktick_16 File: H:/VERI/lib/clktick_16.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file ex15_top.v
+    Info (12023): Found entity 1: ex15_top File: H:/VERI/part_3/ex15/ex15_top.v Line: 1
+Info (12127): Elaborating entity "ex15_top" for the top level hierarchy
+Info (12128): Elaborating entity "clktick_16" for hierarchy "clktick_16:clk" File: H:/VERI/part_3/ex15/ex15_top.v Line: 13
+Info (12128): Elaborating entity "spi2adc" for hierarchy "spi2adc:SPI_ADC" File: H:/VERI/part_3/ex15/ex15_top.v Line: 28
+Info (12128): Elaborating entity "mul_10x14" for hierarchy "mul_10x14:MUL" File: H:/VERI/part_3/ex15/ex15_top.v Line: 41
+Info (12128): Elaborating entity "lpm_mult" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: H:/VERI/part_3/ex15/mul_10x14.v Line: 59
+Info (12130): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: H:/VERI/part_3/ex15/mul_10x14.v Line: 59
+Info (12133): Instantiated megafunction "mul_10x14:MUL|lpm_mult:lpm_mult_component" with the following parameter: File: H:/VERI/part_3/ex15/mul_10x14.v Line: 59
+    Info (12134): Parameter "lpm_hint" = "INPUT_B_IS_CONSTANT=YES,MAXIMIZE_SPEED=5"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_MULT"
+    Info (12134): Parameter "lpm_widtha" = "10"
+    Info (12134): Parameter "lpm_widthb" = "14"
+    Info (12134): Parameter "lpm_widthp" = "24"
+Info (12128): Elaborating entity "multcore" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12128): Elaborating entity "mpar_add" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder" File: c:/altera/16.0/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" File: c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_d9h.tdf
+    Info (12023): Found entity 1: add_sub_d9h File: H:/VERI/part_3/ex15/db/add_sub_d9h.tdf Line: 23
+Info (12128): Elaborating entity "add_sub_d9h" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
+Info (12128): Elaborating entity "mpar_add" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add" File: c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" File: c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_89h.tdf
+    Info (12023): Found entity 1: add_sub_89h File: H:/VERI/part_3/ex15/db/add_sub_89h.tdf Line: 23
+Info (12128): Elaborating entity "add_sub_89h" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_89h:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
+Info (12128): Elaborating entity "altshift" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|altshift:external_latency_ffs" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|altshift:external_latency_ffs", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:BIN2BCD" File: H:/VERI/part_3/ex15/ex15_top.v Line: 43
+Info (12128): Elaborating entity "add3_ge5" for hierarchy "bin2bcd_16:BIN2BCD|add3_ge5:A1" File: H:/VERI/lib/7seg/bin2bcd_16.v Line: 26
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:SEG0" File: H:/VERI/part_3/ex15/ex15_top.v Line: 44
+Info (12128): Elaborating entity "rom" for hierarchy "rom:SINWAVE" File: H:/VERI/part_3/ex15/ex15_top.v Line: 66
+Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:SINWAVE|altsyncram:altsyncram_component" File: H:/VERI/lib/sinwave/rom.v Line: 81
+Info (12130): Elaborated megafunction instantiation "rom:SINWAVE|altsyncram:altsyncram_component" File: H:/VERI/lib/sinwave/rom.v Line: 81
+Info (12133): Instantiated megafunction "rom:SINWAVE|altsyncram:altsyncram_component" with the following parameter: File: H:/VERI/lib/sinwave/rom.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../../lib/sinwave/rom_data.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "10"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_03j1.tdf
+    Info (12023): Found entity 1: altsyncram_03j1 File: H:/VERI/part_3/ex15/db/altsyncram_03j1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_03j1" for hierarchy "rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:SPI1" File: H:/VERI/part_3/ex15/ex15_top.v Line: 70
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:PWM1" File: H:/VERI/part_3/ex15/ex15_top.v Line: 71
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: H:/VERI/part_3/ex15/ex15_top.v Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file H:/VERI/part_3/ex15/output_files/ex15_top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 356 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 301 logic cells
+    Info (21064): Implemented 10 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 913 megabytes
+    Info: Processing ended: Fri Dec 07 09:54:12 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in H:/VERI/part_3/ex15/output_files/ex15_top.map.smsg.
+
+
