@@ -168,4 +168,6 @@ analogue output signal to the range of 0-3.3V.
 square waves with different widths. The width of the square wave is proportional to the amplitude of the digital signal.
 In order to gain a suitable analogue output for earphones, it is required to pass this square wave into a low pass filter.
 
+### Multiple echo circuit
+![echo circuit](https://github.com/BenShen98/VERI/blob/master/part_4/img/multecho_circuit.png)
 
