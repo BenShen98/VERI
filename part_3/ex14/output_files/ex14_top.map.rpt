@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex14_top
-Thu Dec 06 15:45:03 2018
+Fri Dec 07 08:47:06 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -32,12 +32,13 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
  24. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A10"
  25. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A4"
  26. Port Connectivity Checks: "bin2bcd_16:BIN2BCD|add3_ge5:A1"
- 27. Port Connectivity Checks: "mul_10x14:MUL"
- 28. Port Connectivity Checks: "clktick_16:clk"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
+ 27. Port Connectivity Checks: "bin2bcd_16:BIN2BCD"
+ 28. Port Connectivity Checks: "mul_10x14:MUL"
+ 29. Port Connectivity Checks: "clktick_16:clk"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,7 +65,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 06 15:45:03 2018           ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 07 08:47:06 2018           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex14_top                                        ;
 ; Top-level Entity Name           ; ex14_top                                        ;
@@ -244,14 +245,14 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 151            ;
+; Estimate of Logic utilization (ALMs needed) ; 132            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 271            ;
+; Combinational ALUT usage for logic          ; 234            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 20             ;
-;     -- 5 input functions                    ; 18             ;
-;     -- 4 input functions                    ; 158            ;
-;     -- <=3 input functions                  ; 75             ;
+;     -- 6 input functions                    ; 18             ;
+;     -- 5 input functions                    ; 20             ;
+;     -- 4 input functions                    ; 122            ;
+;     -- <=3 input functions                  ; 74             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 79             ;
 ;                                             ;                ;
@@ -263,8 +264,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 48             ;
-; Total fan-out                               ; 1429           ;
-; Average fan-out                             ; 3.09           ;
+; Total fan-out                               ; 1280           ;
+; Average fan-out                             ; 3.01           ;
 +---------------------------------------------+----------------+
 
 
@@ -273,48 +274,40 @@ agreement for further details.
 +---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name     ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |ex14_top                                         ; 271 (10)          ; 79 (10)      ; 10240             ; 0          ; 51   ; 0            ; |ex14_top                                                                                                                                                   ; ex14_top        ; work         ;
-;    |bin2bcd_16:BIN2BCD|                           ; 124 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD                                                                                                                                ; bin2bcd_16      ; work         ;
-;       |add3_ge5:A10|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A10                                                                                                                   ; add3_ge5        ; work         ;
+; |ex14_top                                         ; 234 (10)          ; 79 (10)      ; 10240             ; 0          ; 51   ; 0            ; |ex14_top                                                                                                                                                   ; ex14_top        ; work         ;
+;    |bin2bcd_16:BIN2BCD|                           ; 97 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD                                                                                                                                ; bin2bcd_16      ; work         ;
 ;       |add3_ge5:A11|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A11                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A12|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A12                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A13|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A13                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A14|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A14                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A15|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A15                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A16|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A16                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A16|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A16                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A17|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A17                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A18|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A18                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A19|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A19                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A1|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A1                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A20|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A20                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A21|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A21                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A22|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A22                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A23|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A23                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A24|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A24                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A25|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A25                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A26|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A26                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A27|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A27                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A27|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A27                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A28|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A28                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A29|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A29                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A2|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A2                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A30|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A30                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A32|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A32                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A32|                              ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A32                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A33|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A33                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A34|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A34                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A35|                              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A35                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A3|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A3                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A4|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A4                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A3|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A3                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A5|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A5                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A6|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A6                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A7|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A7                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A8|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A8                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A8|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A8                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A9|                               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A9                                                                                                                    ; add3_ge5        ; work         ;
 ;    |clktick_16:clk|                               ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|clktick_16:clk                                                                                                                                    ; clktick_16      ; work         ;
 ;    |hex_to_7seg:SEG0|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG0                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:SEG1|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG1                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:SEG2|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG2                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:SEG3|                             ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG3                                                                                                                                  ; hex_to_7seg     ; work         ;
-;    |hex_to_7seg:SEG4|                             ; 13 (13)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG4                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |hex_to_7seg:SEG4|                             ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG4                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |mul_10x14:MUL|                                ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL                                                                                                                                     ; mul_10x14       ; work         ;
 ;       |lpm_mult:lpm_mult_component|               ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component                                                                                                         ; lpm_mult        ; work         ;
 ;          |multcore:mult_core|                     ; 36 (6)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                      ; multcore        ; work         ;
@@ -626,12 +619,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd_16:BIN2BCD"                                                                                                                          ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                       ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; B    ; Input ; Warning  ; Input port expression (14 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "B[15..14]" will be connected to GND. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "mul_10x14:MUL"                                                                              ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
-; result[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; result[9..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -660,7 +662,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 9                           ;
 ;     SLD               ; 9                           ;
 ;     plain             ; 51                          ;
-; arriav_lcell_comb     ; 290                         ;
+; arriav_lcell_comb     ; 255                         ;
 ;     arith             ; 65                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 31                          ;
@@ -668,18 +670,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 5                           ;
 ;         4 data inputs ; 5                           ;
 ;         5 data inputs ; 6                           ;
-;     normal            ; 225                         ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 8                           ;
+;     normal            ; 190                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 21                          ;
+;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 12                          ;
-;         4 data inputs ; 153                         ;
-;         5 data inputs ; 12                          ;
-;         6 data inputs ; 20                          ;
+;         4 data inputs ; 117                         ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 18                          ;
 ; boundary_port         ; 51                          ;
 ; stratixv_ram_block    ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 19.00                       ;
-; Average LUT depth     ; 10.77                       ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 9.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -698,7 +701,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Thu Dec 06 15:44:51 2018
+    Info: Processing started: Fri Dec 07 08:46:52 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex14 -c ex14_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -723,8 +726,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file ex14_to
 Info (12021): Found 1 design units, including 1 entities, in source file mul_10x14.v
     Info (12023): Found entity 1: mul_10x14 File: H:/VERI/part_3/ex14/mul_10x14.v Line: 40
 Info (12127): Elaborating entity "ex14_top" for the top level hierarchy
-Info (12128): Elaborating entity "clktick_16" for hierarchy "clktick_16:clk" File: H:/VERI/part_3/ex14/ex14_top.v Line: 14
-Info (12128): Elaborating entity "mul_10x14" for hierarchy "mul_10x14:MUL" File: H:/VERI/part_3/ex14/ex14_top.v Line: 22
+Info (12128): Elaborating entity "clktick_16" for hierarchy "clktick_16:clk" File: H:/VERI/part_3/ex14/ex14_top.v Line: 12
+Info (12128): Elaborating entity "mul_10x14" for hierarchy "mul_10x14:MUL" File: H:/VERI/part_3/ex14/ex14_top.v Line: 20
 Info (12128): Elaborating entity "lpm_mult" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: H:/VERI/part_3/ex14/mul_10x14.v Line: 59
 Info (12130): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: H:/VERI/part_3/ex14/mul_10x14.v Line: 59
 Info (12133): Instantiated megafunction "mul_10x14:MUL|lpm_mult:lpm_mult_component" with the following parameter: File: H:/VERI/part_3/ex14/mul_10x14.v Line: 59
@@ -752,10 +755,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12128): Elaborating entity "add_sub_89h" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_89h:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
 Info (12128): Elaborating entity "altshift" for hierarchy "mul_10x14:MUL|lpm_mult:lpm_mult_component|altshift:external_latency_ffs" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Info (12131): Elaborated megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component|altshift:external_latency_ffs", which is child of megafunction instantiation "mul_10x14:MUL|lpm_mult:lpm_mult_component" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:BIN2BCD" File: H:/VERI/part_3/ex14/ex14_top.v Line: 24
+Info (12128): Elaborating entity "bin2bcd_16" for hierarchy "bin2bcd_16:BIN2BCD" File: H:/VERI/part_3/ex14/ex14_top.v Line: 22
 Info (12128): Elaborating entity "add3_ge5" for hierarchy "bin2bcd_16:BIN2BCD|add3_ge5:A1" File: H:/VERI/lib/7seg/bin2bcd_16.v Line: 26
-Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:SEG0" File: H:/VERI/part_3/ex14/ex14_top.v Line: 25
-Info (12128): Elaborating entity "rom" for hierarchy "rom:SINWAVE" File: H:/VERI/part_3/ex14/ex14_top.v Line: 47
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:SEG0" File: H:/VERI/part_3/ex14/ex14_top.v Line: 23
+Info (12128): Elaborating entity "rom" for hierarchy "rom:SINWAVE" File: H:/VERI/part_3/ex14/ex14_top.v Line: 45
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:SINWAVE|altsyncram:altsyncram_component" File: H:/VERI/lib/sinwave/rom.v Line: 81
 Info (12130): Elaborated megafunction instantiation "rom:SINWAVE|altsyncram:altsyncram_component" File: H:/VERI/lib/sinwave/rom.v Line: 81
 Info (12133): Instantiated megafunction "rom:SINWAVE|altsyncram:altsyncram_component" with the following parameter: File: H:/VERI/lib/sinwave/rom.v Line: 81
@@ -777,22 +780,25 @@ Info (12133): Instantiated megafunction "rom:SINWAVE|altsyncram:altsyncram_compo
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_03j1.tdf
     Info (12023): Found entity 1: altsyncram_03j1 File: H:/VERI/part_3/ex14/db/altsyncram_03j1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_03j1" for hierarchy "rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:SPI1" File: H:/VERI/part_3/ex14/ex14_top.v Line: 51
-Info (12128): Elaborating entity "pwm" for hierarchy "pwm:PWM1" File: H:/VERI/part_3/ex14/ex14_top.v Line: 52
+Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:SPI1" File: H:/VERI/part_3/ex14/ex14_top.v Line: 49
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:PWM1" File: H:/VERI/part_3/ex14/ex14_top.v Line: 50
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: H:/VERI/part_3/ex14/ex14_top.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file H:/VERI/part_3/ex14/output_files/ex14_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 352 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 291 logic cells
+    Info (21061): Implemented 254 logic cells
     Info (21064): Implemented 10 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 905 megabytes
-    Info: Processing ended: Thu Dec 06 15:45:03 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 912 megabytes
+    Info: Processing ended: Fri Dec 07 08:47:06 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

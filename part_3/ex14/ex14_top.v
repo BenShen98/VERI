@@ -3,7 +3,7 @@ module ex14_top(CLOCK_50,SW,HEX0,HEX1,HEX2,HEX3,HEX4, DAC_CS, DAC_SDI, DAC_SCK, 
 	input wire CLOCK_50;										//input clock
 	input wire [9:0] SW;										//switch control frequency
 
-	output  [6:0] HEX0,HEX1,HEX2,HEX3,HEX4;		//frequency display
+	output  [6:0] HEX0,HEX1,HEX2,HEX3,HEX4;		//frequency display, in unit of Hz
 	output  DAC_CS, DAC_SDI, DAC_SCK, DAC_LD;	//SPI2ADC output for right channel
 	output  PWM_OUT; 									//PWM output for Left Channel
 
@@ -19,7 +19,7 @@ module ex14_top(CLOCK_50,SW,HEX0,HEX1,HEX2,HEX3,HEX4, DAC_CS, DAC_SDI, DAC_SCK, 
 
 	mul_10x14 	MUL 		(SW, result);
 
-	bin2bcd_16 	BIN2BCD	(result[23:8], BCD_0, BCD_1, BCD_2, BCD_3, BCD_4);
+	bin2bcd_16 	BIN2BCD	(result[23:10], BCD_0, BCD_1, BCD_2, BCD_3, BCD_4);
 	hex_to_7seg	SEG0		(BCD_0,HEX0);
 	hex_to_7seg	SEG1		(BCD_1,HEX1);
 	hex_to_7seg	SEG2		(BCD_2,HEX2);

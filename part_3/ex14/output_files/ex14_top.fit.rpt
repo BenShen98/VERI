@@ -1,5 +1,5 @@
 Fitter report for ex14_top
-Thu Dec 06 15:45:38 2018
+Fri Dec 07 08:47:42 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -65,15 +65,15 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Thu Dec 06 15:45:38 2018           ;
+; Fitter Status                   ; Successful - Fri Dec 07 08:47:42 2018           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex14_top                                        ;
 ; Top-level Entity Name           ; ex14_top                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 151 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 81                                              ;
+; Logic utilization (in ALMs)     ; 133 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 82                                              ;
 ; Total pins                      ; 51 / 457 ( 11 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 10,240 / 4,065,280 ( < 1 % )                    ;
@@ -161,7 +161,7 @@ agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.7%      ;
-;     Processor 3            ;   0.6%      ;
+;     Processor 3            ;   0.7%      ;
 ;     Processor 4            ;   0.6%      ;
 +----------------------------+-------------+
 
@@ -214,15 +214,16 @@ agreement for further details.
 +----------+--------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                  ;
-+-----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------+------------------+-----------------------+
-; Node                  ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                ; Destination Port ; Destination Port Name ;
-+-----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------+------------------+-----------------------+
-; CLOCK_50~inputCLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                 ;                  ;                       ;
-; spi2dac:SPI1|ctr[1]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:SPI1|ctr[1]~DUPLICATE   ;                  ;                       ;
-; spi2dac:SPI1|state[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:SPI1|state[2]~DUPLICATE ;                  ;                       ;
-+-----------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------+------------------+-----------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                    ;
++------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------+------------------+-----------------------+
+; Node                   ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                 ; Destination Port ; Destination Port Name ;
++------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------+------------------+-----------------------+
+; CLOCK_50~inputCLKENA0  ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                  ;                  ;                       ;
+; pwm:PWM1|count[7]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; pwm:PWM1|count[7]~DUPLICATE      ;                  ;                       ;
+; spi2dac:SPI1|ctr[4]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:SPI1|ctr[4]~DUPLICATE    ;                  ;                       ;
+; spi2dac:SPI1|dac_start ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; spi2dac:SPI1|dac_start~DUPLICATE ;                  ;                       ;
++------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -299,8 +300,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 464 ) ; 0.00 % ( 0 / 464 )         ; 0.00 % ( 0 / 464 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 464 ) ; 0.00 % ( 0 / 464 )         ; 0.00 % ( 0 / 464 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 427 ) ; 0.00 % ( 0 / 427 )         ; 0.00 % ( 0 / 427 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 427 ) ; 0.00 % ( 0 / 427 )         ; 0.00 % ( 0 / 427 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -323,7 +324,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 464 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 427 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -339,14 +340,14 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 151 / 32,070       ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 151                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 161 / 32,070       ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 133 / 32,070       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 133                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 141 / 32,070       ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 25                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 121                ;       ;
-;         [c] ALMs used for registers                         ; 15                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 102                ;       ;
+;         [c] ALMs used for registers                         ; 14                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 32,070        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -355,24 +356,24 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 23 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 23                 ;       ;
+; Total LABs:  partially or completely used                   ; 24 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 24                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 272                ;       ;
+; Combinational ALUT usage for logic                          ; 235                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 20                 ;       ;
-;     -- 5 input functions                                    ; 18                 ;       ;
-;     -- 4 input functions                                    ; 158                ;       ;
-;     -- <=3 input functions                                  ; 76                 ;       ;
+;     -- 6 input functions                                    ; 18                 ;       ;
+;     -- 5 input functions                                    ; 20                 ;       ;
+;     -- 4 input functions                                    ; 122                ;       ;
+;     -- <=3 input functions                                  ; 75                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 16                 ;       ;
-; Dedicated logic registers                                   ; 81                 ;       ;
+; Dedicated logic registers                                   ; 82                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 78 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 3 / 64,140         ; < 1 % ;
+;         -- Secondary logic registers                        ; 4 / 64,140         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 79                 ;       ;
-;         -- Routing optimization registers                   ; 2                  ;       ;
+;         -- Routing optimization registers                   ; 3                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 51 / 457           ; 11 %  ;
@@ -428,11 +429,11 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.2% / 1.3% / 1.0% ;       ;
-; Maximum fan-out                                             ; 47                 ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.1% / 1.2% / 1.3% ;       ;
+; Maximum fan-out                                             ; 49                 ;       ;
 ; Highest non-global fan-out                                  ; 24                 ;       ;
-; Total fan-out                                               ; 1351               ;       ;
-; Average fan-out                                             ; 2.86               ;       ;
+; Total fan-out                                               ; 1204               ;       ;
+; Average fan-out                                             ; 2.76               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -441,14 +442,14 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 151 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 151                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 161 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 133 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 133                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 141 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 25                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 121                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 15                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 102                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 14                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -457,16 +458,16 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 23 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 23                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 24 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 24                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 272                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 235                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 20                    ; 0                              ;
-;     -- 5 input functions                                    ; 18                    ; 0                              ;
-;     -- 4 input functions                                    ; 158                   ; 0                              ;
-;     -- <=3 input functions                                  ; 76                    ; 0                              ;
+;     -- 6 input functions                                    ; 18                    ; 0                              ;
+;     -- 5 input functions                                    ; 20                    ; 0                              ;
+;     -- 4 input functions                                    ; 122                   ; 0                              ;
+;     -- <=3 input functions                                  ; 75                    ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 16                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
@@ -475,10 +476,10 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 78 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 3 / 64140 ( < 1 % )   ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 4 / 64140 ( < 1 % )   ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 79                    ; 0                              ;
-;         -- Routing optimization registers                   ; 2                     ; 0                              ;
+;         -- Routing optimization registers                   ; 3                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -496,8 +497,8 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1351                  ; 0                              ;
-;     -- Registered Connections                               ; 255                   ; 0                              ;
+;     -- Total Connections                                    ; 1204                  ; 0                              ;
+;     -- Registered Connections                               ; 254                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -529,7 +530,7 @@ The pin-out file can be found in H:/VERI/part_3/ex14/output_files/ex14_top.pin.
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 49                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 51                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[0]    ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[1]    ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; SW[2]    ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
@@ -1523,62 +1524,54 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                        ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name     ; Library Name ;
 +---------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |ex14_top                                         ; 151.0 (5.5)          ; 160.0 (9.8)                      ; 9.0 (4.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 272 (11)            ; 81 (10)                   ; 0 (0)         ; 10240             ; 1     ; 0          ; 51   ; 0            ; |ex14_top                                                                                                                                                   ; ex14_top        ; work         ;
-;    |bin2bcd_16:BIN2BCD|                           ; 68.0 (0.0)           ; 68.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 124 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD                                                                                                                                ; bin2bcd_16      ; work         ;
-;       |add3_ge5:A1|                               ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A1                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A10|                              ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A10                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A11|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A11                                                                                                                   ; add3_ge5        ; work         ;
+; |ex14_top                                         ; 132.5 (5.5)          ; 140.5 (9.5)                      ; 8.0 (4.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 235 (11)            ; 82 (10)                   ; 0 (0)         ; 10240             ; 1     ; 0          ; 51   ; 0            ; |ex14_top                                                                                                                                                   ; ex14_top        ; work         ;
+;    |bin2bcd_16:BIN2BCD|                           ; 54.5 (0.0)           ; 54.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD                                                                                                                                ; bin2bcd_16      ; work         ;
+;       |add3_ge5:A11|                              ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A11                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A12|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A12                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A13|                              ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A13                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A14|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A14                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A15|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A15                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A16|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A16                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A16|                              ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A16                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A17|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A17                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A18|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A18                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A19|                              ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A19                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A2|                               ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A2                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A20|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A20                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A20|                              ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A20                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A21|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A21                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A22|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A22                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A23|                              ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A23                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A24|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A24                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A25|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A25                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A26|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A26                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A27|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A27                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A27|                              ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A27                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A28|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A28                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A29|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A29                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A3|                               ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A3                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A3|                               ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A3                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A30|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A30                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A32|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A32                                                                                                                   ; add3_ge5        ; work         ;
+;       |add3_ge5:A32|                              ; 6.5 (6.5)            ; 6.5 (6.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A32                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A33|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A33                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A34|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A34                                                                                                                   ; add3_ge5        ; work         ;
 ;       |add3_ge5:A35|                              ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A35                                                                                                                   ; add3_ge5        ; work         ;
-;       |add3_ge5:A4|                               ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A4                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A5|                               ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A5                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A6|                               ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A6                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A7|                               ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A7                                                                                                                    ; add3_ge5        ; work         ;
-;       |add3_ge5:A8|                               ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A8                                                                                                                    ; add3_ge5        ; work         ;
+;       |add3_ge5:A8|                               ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A8                                                                                                                    ; add3_ge5        ; work         ;
 ;       |add3_ge5:A9|                               ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|bin2bcd_16:BIN2BCD|add3_ge5:A9                                                                                                                    ; add3_ge5        ; work         ;
-;    |clktick_16:clk|                               ; 10.7 (10.7)          ; 11.2 (11.2)                      ; 0.6 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|clktick_16:clk                                                                                                                                    ; clktick_16      ; work         ;
+;    |clktick_16:clk|                               ; 10.7 (10.7)          ; 11.7 (11.7)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|clktick_16:clk                                                                                                                                    ; clktick_16      ; work         ;
 ;    |hex_to_7seg:SEG0|                             ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG0                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:SEG1|                             ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG1                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:SEG2|                             ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG2                                                                                                                                  ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:SEG3|                             ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG3                                                                                                                                  ; hex_to_7seg     ; work         ;
-;    |hex_to_7seg:SEG4|                             ; 7.5 (7.5)            ; 7.5 (7.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG4                                                                                                                                  ; hex_to_7seg     ; work         ;
-;    |mul_10x14:MUL|                                ; 17.8 (0.0)           ; 17.8 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL                                                                                                                                     ; mul_10x14       ; work         ;
-;       |lpm_mult:lpm_mult_component|               ; 17.8 (0.0)           ; 17.8 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component                                                                                                         ; lpm_mult        ; work         ;
-;          |multcore:mult_core|                     ; 17.8 (2.8)           ; 17.8 (2.8)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (6)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                      ; multcore        ; work         ;
+;    |hex_to_7seg:SEG4|                             ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|hex_to_7seg:SEG4                                                                                                                                  ; hex_to_7seg     ; work         ;
+;    |mul_10x14:MUL|                                ; 18.0 (0.0)           ; 18.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL                                                                                                                                     ; mul_10x14       ; work         ;
+;       |lpm_mult:lpm_mult_component|               ; 18.0 (0.0)           ; 18.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component                                                                                                         ; lpm_mult        ; work         ;
+;          |multcore:mult_core|                     ; 18.0 (3.0)           ; 18.0 (3.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (6)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                      ; multcore        ; work         ;
 ;             |mpar_add:padder|                     ; 15.0 (0.0)           ; 15.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
 ;                |lpm_add_sub:adder[0]|             ; 9.0 (0.0)            ; 9.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 18 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
 ;                   |add_sub_d9h:auto_generated|    ; 9.0 (9.0)            ; 9.0 (9.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 18 (18)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated                      ; add_sub_d9h     ; work         ;
 ;                |mpar_add:sub_par_add|             ; 6.0 (0.0)            ; 6.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
 ;                   |lpm_add_sub:adder[0]|          ; 6.0 (0.0)            ; 6.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
 ;                      |add_sub_89h:auto_generated| ; 6.0 (6.0)            ; 6.0 (6.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_89h:auto_generated ; add_sub_89h     ; work         ;
-;    |pwm:PWM1|                                     ; 9.8 (9.8)            ; 10.4 (10.4)                      ; 0.6 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|pwm:PWM1                                                                                                                                          ; pwm             ; work         ;
+;    |pwm:PWM1|                                     ; 9.8 (9.8)            ; 11.0 (11.0)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|pwm:PWM1                                                                                                                                          ; pwm             ; work         ;
 ;    |rom:SINWAVE|                                  ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 10240             ; 1     ; 0          ; 0    ; 0            ; |ex14_top|rom:SINWAVE                                                                                                                                       ; rom             ; work         ;
 ;       |altsyncram:altsyncram_component|           ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 10240             ; 1     ; 0          ; 0    ; 0            ; |ex14_top|rom:SINWAVE|altsyncram:altsyncram_component                                                                                                       ; altsyncram      ; work         ;
 ;          |altsyncram_03j1:auto_generated|         ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 10240             ; 1     ; 0          ; 0    ; 0            ; |ex14_top|rom:SINWAVE|altsyncram:altsyncram_component|altsyncram_03j1:auto_generated                                                                        ; altsyncram_03j1 ; work         ;
-;    |spi2dac:SPI1|                                 ; 17.5 (17.5)          ; 21.2 (21.2)                      ; 3.7 (3.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|spi2dac:SPI1                                                                                                                                      ; spi2dac         ; work         ;
+;    |spi2dac:SPI1|                                 ; 17.5 (17.5)          ; 19.3 (19.3)                      ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ex14_top|spi2dac:SPI1                                                                                                                                      ; spi2dac         ; work         ;
 +---------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1628,17 +1621,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DAC_SCK  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; DAC_LD   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; PWM_OUT  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; SW[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[4]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[2]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[1]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[5]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[2]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[6]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[3]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[3]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[7]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[8]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[9]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; CLOCK_50 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[5]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[4]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1647,93 +1640,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                                                                                                                              ; Pad To Core Index ; Setting ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
-; SW[0]                                                                                                                                                            ;                   ;         ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~1                       ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~9                       ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 0                 ; 0       ;
-;      - Add0~1                                                                                                                                                    ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][14]~1                                                                              ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][15]~2                                                                              ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][16]~3                                                                              ; 0                 ; 0       ;
-; SW[4]                                                                                                                                                            ;                   ;         ;
+; SW[2]                                                                                                                                                            ;                   ;         ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~62                      ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~1                       ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~29                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~33                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~37                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~41                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~45                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~49                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~53                      ; 1                 ; 0       ;
-;      - Add0~17                                                                                                                                                   ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][9]~0                                                                               ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~17                      ; 1                 ; 0       ;
+;      - Add0~9                                                                                                                                                    ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][14]~1                                                                              ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][15]~2                                                                              ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][16]~3                                                                              ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][17]~4                                                                              ; 1                 ; 0       ;
 ; SW[1]                                                                                                                                                            ;                   ;         ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~66                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~10                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~1                       ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~9                       ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~17                      ; 0                 ; 0       ;
 ;      - Add0~5                                                                                                                                                    ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][14]~1                                                                              ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][15]~2                                                                              ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][16]~3                                                                              ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][17]~4                                                                              ; 0                 ; 0       ;
-; SW[5]                                                                                                                                                            ;                   ;         ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 1                 ; 0       ;
+; SW[0]                                                                                                                                                            ;                   ;         ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~54                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~10                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~1                       ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~17                      ; 0                 ; 0       ;
+;      - Add0~1                                                                                                                                                    ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][14]~1                                                                              ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][15]~2                                                                              ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][16]~3                                                                              ; 0                 ; 0       ;
+; SW[6]                                                                                                                                                            ;                   ;         ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~1                       ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~29                      ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~33                      ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~37                      ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~41                      ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~45                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~49                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~53                      ; 1                 ; 0       ;
-;      - Add0~21                                                                                                                                                   ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][9]~0                                                                               ; 1                 ; 0       ;
+;      - Add0~25                                                                                                                                                   ; 1                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][17]~5                                                                              ; 1                 ; 0       ;
-; SW[2]                                                                                                                                                            ;                   ;         ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~62                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~9                       ; 0                 ; 0       ;
+; SW[3]                                                                                                                                                            ;                   ;         ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~58                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 0                 ; 0       ;
-;      - Add0~9                                                                                                                                                    ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~17                      ; 0                 ; 0       ;
+;      - Add0~13                                                                                                                                                   ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][14]~1                                                                              ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][15]~2                                                                              ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][16]~3                                                                              ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][17]~4                                                                              ; 0                 ; 0       ;
-; SW[6]                                                                                                                                                            ;                   ;         ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~9                       ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~29                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~33                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~37                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~41                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~45                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~49                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~53                      ; 1                 ; 0       ;
-;      - Add0~25                                                                                                                                                   ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][17]~5                                                                              ; 1                 ; 0       ;
-; SW[3]                                                                                                                                                            ;                   ;         ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~18                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 1                 ; 0       ;
-;      - Add0~13                                                                                                                                                   ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][14]~1                                                                              ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][15]~2                                                                              ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][16]~3                                                                              ; 1                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[0][17]~4                                                                              ; 1                 ; 0       ;
 ; SW[7]                                                                                                                                                            ;                   ;         ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~5                       ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~29                      ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~33                      ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~37                      ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~41                      ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~45                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~49                      ; 0                 ; 0       ;
-;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~53                      ; 0                 ; 0       ;
 ;      - Add0~29                                                                                                                                                   ; 0                 ; 0       ;
 ;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][17]~5                                                                              ; 0                 ; 0       ;
 ; SW[8]                                                                                                                                                            ;                   ;         ;
@@ -1756,6 +1725,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLOCK_50                                                                                                                                                         ;                   ;         ;
 ;      - spi2dac:SPI1|clk_1MHz                                                                                                                                     ; 0                 ; 0       ;
 ;      - clktick_16:clk|tick                                                                                                                                       ; 0                 ; 0       ;
+; SW[5]                                                                                                                                                            ;                   ;         ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~10                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~29                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~33                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~37                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~41                      ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~45                      ; 1                 ; 0       ;
+;      - Add0~21                                                                                                                                                   ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][9]~0                                                                               ; 1                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][17]~5                                                                              ; 1                 ; 0       ;
+; SW[4]                                                                                                                                                            ;                   ;         ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~54                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~13                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~21                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~25                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~29                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~33                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~37                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~41                      ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_d9h:auto_generated|op_1~45                      ; 0                 ; 0       ;
+;      - Add0~17                                                                                                                                                   ; 0                 ; 0       ;
+;      - mul_10x14:MUL|lpm_mult:lpm_mult_component|multcore:mult_core|romout[1][9]~0                                                                               ; 0                 ; 0       ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1765,11 +1758,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                    ; Location           ; Fan-Out ; Usage               ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------+--------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                ; PIN_AF14           ; 3       ; Clock               ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50                ; PIN_AF14           ; 47      ; Clock               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; clktick_16:clk|Equal0~3 ; LABCELL_X57_Y2_N36 ; 10      ; Sync. clear         ; no     ; --                   ; --               ; --                        ;
-; clktick_16:clk|tick     ; FF_X60_Y2_N44      ; 24      ; Clock, Clock enable ; no     ; --                   ; --               ; --                        ;
-; spi2dac:SPI1|always3~0  ; LABCELL_X56_Y2_N57 ; 9       ; Sync. load          ; no     ; --                   ; --               ; --                        ;
-; spi2dac:SPI1|clk_1MHz   ; FF_X56_Y1_N53      ; 24      ; Clock               ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                ; PIN_AF14           ; 49      ; Clock               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; clktick_16:clk|Equal0~3 ; LABCELL_X53_Y2_N36 ; 10      ; Sync. clear         ; no     ; --                   ; --               ; --                        ;
+; clktick_16:clk|tick     ; FF_X57_Y2_N26      ; 24      ; Clock, Clock enable ; no     ; --                   ; --               ; --                        ;
+; spi2dac:SPI1|always3~0  ; LABCELL_X55_Y2_N12 ; 9       ; Sync. load          ; no     ; --                   ; --               ; --                        ;
+; spi2dac:SPI1|clk_1MHz   ; FF_X56_Y2_N53      ; 23      ; Clock               ; no     ; --                   ; --               ; --                        ;
 +-------------------------+--------------------+---------+---------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1778,7 +1771,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AF14 ; 47      ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_AF14 ; 49      ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1797,14 +1790,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 313 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 283 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 13 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 68 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 75 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 111 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 76 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 57 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 20 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1860,12 +1853,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 129 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 113 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 48 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 49 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 117 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 175 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 38 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 41 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 126 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 197 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1969,17 +1962,17 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; DAC_SCK            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; DAC_LD             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; PWM_OUT            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -2031,7 +2024,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 11.9              ;
+; CLOCK_50        ; CLOCK_50             ; 13.2              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
@@ -2042,53 +2035,54 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------+-------------------------------------+-------------------+
 ; Source Register                     ; Destination Register                ; Delay Added in ns ;
 +-------------------------------------+-------------------------------------+-------------------+
-; spi2dac:SPI1|ctr[2]                 ; spi2dac:SPI1|clk_1MHz               ; 1.229             ;
-; spi2dac:SPI1|ctr[4]                 ; spi2dac:SPI1|clk_1MHz               ; 1.215             ;
-; spi2dac:SPI1|ctr[3]                 ; spi2dac:SPI1|clk_1MHz               ; 1.215             ;
-; spi2dac:SPI1|ctr[0]                 ; spi2dac:SPI1|clk_1MHz               ; 1.215             ;
-; spi2dac:SPI1|ctr[1]                 ; spi2dac:SPI1|clk_1MHz               ; 1.215             ;
-; spi2dac:SPI1|clk_1MHz               ; spi2dac:SPI1|clk_1MHz               ; 1.215             ;
-; clktick_16:clk|count[14]            ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[13]            ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[12]            ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[11]            ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[10]            ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[9]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[8]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[7]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[6]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[15]            ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[5]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[4]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[2]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[1]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[0]             ; clktick_16:clk|tick                 ; 0.741             ;
-; clktick_16:clk|count[3]             ; clktick_16:clk|tick                 ; 0.741             ;
-; pwm:PWM1|d[8]                       ; pwm:PWM1|pwm_out                    ; 0.401             ;
-; pwm:PWM1|count[9]                   ; pwm:PWM1|pwm_out                    ; 0.390             ;
-; pwm:PWM1|d[9]                       ; pwm:PWM1|pwm_out                    ; 0.338             ;
-; spi2dac:SPI1|sr_state.IDLE          ; spi2dac:SPI1|sr_state.WAIT_CSB_FALL ; 0.335             ;
-; spi2dac:SPI1|sr_state.WAIT_CSB_HIGH ; spi2dac:SPI1|sr_state.IDLE          ; 0.329             ;
-; spi2dac:SPI1|sr_state.WAIT_CSB_FALL ; spi2dac:SPI1|dac_start              ; 0.291             ;
-; pwm:PWM1|count[0]                   ; pwm:PWM1|count[9]                   ; 0.240             ;
-; pwm:PWM1|count[8]                   ; pwm:PWM1|pwm_out                    ; 0.235             ;
-; pwm:PWM1|d[7]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[6]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[5]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[4]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[3]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[2]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[1]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|d[0]                       ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[7]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[6]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[5]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[4]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[3]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[2]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
-; pwm:PWM1|count[1]                   ; pwm:PWM1|pwm_out                    ; 0.160             ;
+; spi2dac:SPI1|ctr[4]                 ; spi2dac:SPI1|clk_1MHz               ; 0.998             ;
+; spi2dac:SPI1|ctr[3]                 ; spi2dac:SPI1|clk_1MHz               ; 0.998             ;
+; spi2dac:SPI1|ctr[2]                 ; spi2dac:SPI1|clk_1MHz               ; 0.998             ;
+; spi2dac:SPI1|ctr[0]                 ; spi2dac:SPI1|clk_1MHz               ; 0.998             ;
+; spi2dac:SPI1|ctr[1]                 ; spi2dac:SPI1|clk_1MHz               ; 0.998             ;
+; spi2dac:SPI1|clk_1MHz               ; spi2dac:SPI1|clk_1MHz               ; 0.998             ;
+; clktick_16:clk|count[9]             ; clktick_16:clk|tick                 ; 0.547             ;
+; clktick_16:clk|count[13]            ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[12]            ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[11]            ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[10]            ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[8]             ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[7]             ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[6]             ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[2]             ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[1]             ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[0]             ; clktick_16:clk|tick                 ; 0.545             ;
+; clktick_16:clk|count[14]            ; clktick_16:clk|tick                 ; 0.456             ;
+; pwm:PWM1|d[8]                       ; pwm:PWM1|pwm_out                    ; 0.399             ;
+; clktick_16:clk|count[4]             ; clktick_16:clk|tick                 ; 0.396             ;
+; pwm:PWM1|count[9]                   ; pwm:PWM1|pwm_out                    ; 0.386             ;
+; clktick_16:clk|count[5]             ; clktick_16:clk|tick                 ; 0.382             ;
+; clktick_16:clk|count[3]             ; clktick_16:clk|tick                 ; 0.377             ;
+; clktick_16:clk|count[15]            ; clktick_16:clk|tick                 ; 0.365             ;
+; spi2dac:SPI1|sr_state.IDLE          ; spi2dac:SPI1|sr_state.WAIT_CSB_FALL ; 0.354             ;
+; pwm:PWM1|d[9]                       ; pwm:PWM1|pwm_out                    ; 0.335             ;
+; spi2dac:SPI1|sr_state.WAIT_CSB_FALL ; spi2dac:SPI1|dac_start              ; 0.279             ;
+; pwm:PWM1|d[7]                       ; pwm:PWM1|pwm_out                    ; 0.237             ;
+; pwm:PWM1|count[7]                   ; pwm:PWM1|pwm_out                    ; 0.237             ;
+; pwm:PWM1|count[8]                   ; pwm:PWM1|pwm_out                    ; 0.232             ;
+; clktick_16:clk|tick                 ; spi2dac:SPI1|dac_start              ; 0.198             ;
+; spi2dac:SPI1|sr_state.WAIT_CSB_HIGH ; spi2dac:SPI1|sr_state.IDLE          ; 0.184             ;
+; pwm:PWM1|d[6]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|d[5]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|d[4]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|d[3]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|d[2]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|d[1]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|d[0]                       ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[6]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[5]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[4]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[3]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[2]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[1]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
+; pwm:PWM1|count[0]                   ; pwm:PWM1|pwm_out                    ; 0.149             ;
 +-------------------------------------+-------------------------------------+-------------------+
-Note: This table only shows the top 45 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 46 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2152,7 +2146,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "OLED_DATA" is assigned to location or region, but does not exist in design
     Warning (15706): Node "OLED_DC" is assigned to location or region, but does not exist in design
     Warning (15706): Node "OLED_RST" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -2166,7 +2160,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.33 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.32 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2175,10 +2169,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file H:/VERI/part_3/ex14/output_files/ex14_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 2635 megabytes
-    Info: Processing ended: Thu Dec 06 15:45:40 2018
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:58
+    Info: Peak virtual memory: 2632 megabytes
+    Info: Processing ended: Fri Dec 07 08:47:44 2018
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:57
 
 
 +----------------------------+
