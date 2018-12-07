@@ -138,9 +138,15 @@ In addition, we also included a graph for 18 clock cycles on the scope. The figu
 
 ![circuit](https://github.com/BenShen98/VERI/blob/master/part_3/img/varsinegen.png)
 
-The address is now controlled by the switchs. It is passed through an adder and a D_Flip Flop. In other words, the increment value is user-defined now. The multiplication block was included from IP Catalog in Quartus Prime.\
+The address is now controlled by the switches. It is passed through an adder and a D_Flip Flop. In other words, the increment value is user-defined now. The multiplication block was included from IP Catalog in Quartus Prime.\
 The purpose of the upper line is to display the frequency of the signal. Data x sampling frequency "/" sample number. 
 The dvision by 1024 was implemented using reading DATA [23:10], which takes the upper 14 bits. As a result, the data is divided by 1024. 
+
+### Analogue to Digital Converter
+
+Instead	 of	 using	 the	 slide	 switches	 to	 control	 the	 frequency,	 use	 the	 A-to-D	 converter	 to	
+convert	 the	 dc	 voltage	 of	 the	 potentiometer	 (which	 is	 between	 0v	 and	 3.3v)	 and	 use	 this	
+converter	value	instead.	Please see VERI/Part 4/ex15_top.v for more infornmation. 	
 
 
 ## Part 4 Echo Synthesizer 
