@@ -135,7 +135,12 @@ In addition, we also included a graph for 18 clock cycles on the scope. The figu
 
 
 ### A variable sine wave generator
+
 ![circuit](https://github.com/BenShen98/VERI/blob/master/part_3/img/varsinegen.png)
+
+The address is now controlled by the switchs. It is passed through an adder and a D_Flip Flop. In other words, the increment value is user-defined now. The multiplication block was included from IP Catalog in Quartus Prime.\
+The purpose of the upper line is to display the frequency of the signal. Data x sampling frequency "/" sample number. 
+The dvision by 1024 was implemented using reading DATA [23:10], which takes the upper 14 bits. As a result, the data is divided by 1024. 
 
 
 ## Part 4 Echo Synthesizer 
