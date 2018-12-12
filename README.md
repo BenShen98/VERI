@@ -208,3 +208,10 @@ In order to gain a suitable analogue output for earphones, it is required to pas
 ### Variable echo circuit
 ![echo circuit](https://github.com/BenShen98/VERI/blob/master/part_4/img/ex19_varecho_circuit.png)
 
+
+13 bit counter were used because the counter is the pointer to the ROM address. (2^13=8192)
+
+The echo delay is (SW[8:0] << 2) x 1/10000 ms.\
+In order to allow 7-seg display time passed in ms, display=(SW[8:0] * 1638) >> 10.
+
+By combin the two expression above, dispaly=10 / 2^4 * 1638 /2^10 = 0.999755859 ms.
