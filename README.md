@@ -164,7 +164,15 @@ Because 14’h2710 is 10000 in decimal, the pointer to ROM is clocked at 10KHz, 
 Let n be the number of address pointer increment, that means it will take 1024/x clock cycle to complete one full sin wave, and each clock cycle is 1/10000 seconds
 
 Please see the figure below for details.
-![Math equation](https://github.com/BenShen98/VERI/blob/master/part_3/img/Sampling%20Frequency.png)
+
+<img src="https://github.com/BenShen98/VERI/blob/master/part_3/img/Sampling%20Frequency.png" height="50">
+
+#### Nyquist frequency
+
+We notice that our wave stop output correct frequency after 5kHz. After some thinking, we realised it was linked to the Nyquist theorem. The sampling frequency is 10kHz, restricted by the SPI (tick) frequency we are currently using.  Only waves below the frequency 5kHz will be correctly detected. 
+
+We also noticed that frequency goes extremely high, the frequency actually become detectable again. And we deduce it is because we are seeing the neighbour point of the current point in the next period. i.e. if current sampling point is at f(t), the next sampling is at f(t+T+δ), equals to f(t+δ), where T is the period of the current wave.\
+It's a similar example of real life, where if you stare at a care wheel spinning, it actually spins backwards when reaching a certain speed.
 
 ### Analogue to Digital Converter
 
