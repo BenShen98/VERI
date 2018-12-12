@@ -1,0 +1,8 @@
+module ex14_top(CLOCK_50,SW,HEX0,HEX1,HEX2,HEX3,HEX4, DAC_CS, DAC_SDI, DAC_SCK, DAC_LD, PWM_OUT);
+
+input wire CLOCK_50;										//input clock
+input wire [9:0] SW;										//switch control frequency
+
+output wire [6:0] HEX0,HEX1,HEX2,HEX3,HEX4;		//frequency display
+output wire DAC_CS, DAC_SDI, DAC_SCK, DAC_LD;	//SPI2ADC output for right channel
+output wire PWM_OUT; 									//PWM output for Left Channel

@@ -1,0 +1,89 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ex14_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib/sinwave {H:/VERI/lib/sinwave/rom.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rom
+# 
+# Top level modules:
+# 	rom
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib {H:/VERI/lib/clktick_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clktick_16
+# 
+# Top level modules:
+# 	clktick_16
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib/interface {H:/VERI/lib/interface/spi2dac.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi2dac
+# 
+# Top level modules:
+# 	spi2dac
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib/interface {H:/VERI/lib/interface/pwm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pwm
+# 
+# Top level modules:
+# 	pwm
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib/7seg {H:/VERI/lib/7seg/hex_to_7seg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hex_to_7seg
+# 
+# Top level modules:
+# 	hex_to_7seg
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib/7seg {H:/VERI/lib/7seg/bin2bcd_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bin2bcd_16
+# 
+# Top level modules:
+# 	bin2bcd_16
+# vlog -vlog01compat -work work +incdir+H:/VERI/lib/7seg {H:/VERI/lib/7seg/add3_ge5.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module add3_ge5
+# 
+# Top level modules:
+# 	add3_ge5
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/ex14 {H:/VERI/part_3/ex14/ex14_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex14_top
+# 
+# Top level modules:
+# 	ex14_top
+# vlog -vlog01compat -work work +incdir+H:/VERI/part_3/ex14 {H:/VERI/part_3/ex14/mul_10x14.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mul_10x14
+# 
+# Top level modules:
+# 	mul_10x14
+# 
+vsim work.ex14_top
+# vsim work.ex14_top 
+# Loading work.ex14_top
+# Loading work.clktick_16
+# Loading work.mul_10x14
+# ** Error: (vsim-3033) H:/VERI/part_3/ex14/mul_10x14.v(59): Instantiation of 'lpm_mult' failed. The design unit was not found.
+# 
+#         Region: /ex14_top/MUL
+#         Searched libraries:
+#             H:/VERI/part_3/ex14/simulation/modelsim/rtl_work
+# Loading work.bin2bcd_16
+# Loading work.add3_ge5
+# Loading work.hex_to_7seg
+# Loading work.rom
+# ** Error: (vsim-3033) H:/VERI/lib/sinwave/rom.v(81): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /ex14_top/SINWAVE
+#         Searched libraries:
+#             H:/VERI/part_3/ex14/simulation/modelsim/rtl_work
+# Loading work.spi2dac
+# Loading work.pwm
+# Error loading design
