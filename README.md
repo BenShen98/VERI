@@ -142,6 +142,14 @@ The address is now controlled by the switches. It is passed through an adder and
 The purpose of the upper line is to display the frequency of the signal. Data x sampling frequency "/" sample number. 
 The dvision by 1024 was implemented using reading DATA [23:10], which takes the upper 14 bits. As a result, the data is divided by 1024. 
 
+#### Why mutiply by 14’h2710 and take the top 14 bit.
+
+Because 14’h2710 is 10000 in decimal, the pointer to ROM is clocked at 10KHz, finally the ROM had stored 1k(1024) data point of one complete sinewave.
+
+Let n be the number of address pointer increament, that means it will take 1024/x clock cycle to complete one full sin wave, and each clock cycle is 1/10000 seconds. Means the period 1024/(x*10000) second to
+To caculate the frequency of sine wave, f=1/period=x*10000/1024. Which is mutiply x by 10000 and left shift by 10.
+
+
 ### Analogue to Digital Converter
 
 Instead	 of	 using	 the	 slide	 switches	 to	 control	 the	 frequency,	 use	 the	 A-to-D	 converter	 to	
