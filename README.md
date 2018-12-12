@@ -50,6 +50,7 @@ We have set the pin location according to the table given on the labnotes. The p
 
 ### Optional Binary to BCD Conversion
 In this experiment, the get_5_get_3 algorithm was introduced to perform the conversion. The following schematic diagram shows how data flows among different blocks. 
+
 ![data flow block](https://github.com/BenShen98/VERI/blob/master/part_1/img/bin2bcd.jpeg)
 
 The additional "0" must be added at the beginning when a new block of three bits is introduced.(Blocks A1,A4,A10)
