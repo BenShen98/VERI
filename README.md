@@ -115,6 +115,10 @@ The same naming convention applies for the Analogue to Digital convertor.
 ### Verify parallel input 
 According to the SPI2DAC proxy mentioned in lecture, the wave form h'23B after decoding should look like the diagram below.
 ![wave form](https://github.com/BenShen98/VERI/blob/master/part_3/img/modelsim_spi10'h23b.PNG)
+The next step was to change the input to switch controls. Different input would only change the DC offest. Hence, the line would be shifted up or down.
+
+![DC](https://github.com/BenShen98/VERI/blob/master/part_3/img/PWM_full.jpg)
+
 The expected output was verified as two DC voltage on both SPI and PWM channels.
 
 ### Digital to Analogue conversion using pulse-width-modulation
