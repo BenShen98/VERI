@@ -63,7 +63,7 @@ By using ModelSim of RTL Simulation, waveforms of various different signals can 
 The following code is the instruction:
  * add wave XXXXXXXX
  * force xxx 
- * force CLOCK_50 0 1,1 10ns -repeat xxxns
+ * force CLOCK_50 0 0,1 10ns -repeat xxxns
  * (*force* can enable all signals to user defined values)
  * *run* executes the given signals
 
